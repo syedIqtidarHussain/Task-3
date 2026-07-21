@@ -15,7 +15,7 @@
   <main class="submission-wrapper">
     <div class="submission-card container">
       
-      <!-- Left Info Column -->
+      <!-- Left Column -->
       <div class="submission-info">
         <h1 class="submission-title">Submission</h1>
         
@@ -102,9 +102,24 @@
 
       </form>
     </div>
-    
-    <div class="submission-cutout"></div>
   </main>
+
+  <!-- Touch Swipe Script: Right Swipe Se Index Page Par Wapis Jane Ke Liye -->
+  <script>
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    document.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX;
+      if (touchendX - touchstartX > 60) {
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
 
 </body>
 </html>
