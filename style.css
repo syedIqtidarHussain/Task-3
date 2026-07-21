@@ -5,37 +5,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 :root {
   --primary-red: #802327;
-  --dark-red: #651a1e;
   --text-dark: #111111;
   --text-light: #ffffff;
   --border-light: rgba(255, 255, 255, 0.6);
-  --yellow-accent: #fdd800;
 }
 
 body {
   background-color: #ffffff;
   color: var(--text-dark);
-  line-height: 1.5;
+  line-height: 1.4;
+  overflow-x: hidden;
 }
 
 .container {
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 /* ==========================================
-   INDEX.HTML - HERO SECTION & BUTTON
+   HERO HEADER & BUTTON
    ========================================== */
 .hero-section {
   background-color: var(--primary-red);
   color: var(--text-light);
-  padding: 30px 0 60px;
+  padding: 24px 0 50px;
   position: relative;
 }
 
@@ -46,48 +46,46 @@ body {
   margin-bottom: 20px;
 }
 
-.logo-icon {
-  width: 70px;
-  height: 70px;
+.main-logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .goto-btn {
-  display: inline-block;
   background-color: #ffffff;
   color: var(--primary-red);
-  padding: 10px 22px;
+  padding: 8px 16px;
   border-radius: 4px;
   font-weight: bold;
   text-decoration: none;
-  font-size: 0.95rem;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 0.85rem;
+  transition: opacity 0.2s;
+  white-space: nowrap;
 }
 
 .goto-btn:hover {
-  background-color: #f0f0f0;
-  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .main-title {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 900;
-  letter-spacing: 1px;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .sub-title {
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin-bottom: 25px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
 }
 
 .hero-desc {
-  font-size: 0.88rem;
-  margin-bottom: 18px;
-  max-width: 900px;
+  font-size: 0.82rem;
+  margin-bottom: 12px;
   opacity: 0.95;
-  text-align: justify;
+  text-align: left;
+  line-height: 1.4;
 }
 
 .hero-cutout {
@@ -96,45 +94,43 @@ body {
   right: 0;
   width: 0;
   height: 0;
-  border-bottom: 45px solid #ffffff;
-  border-left: 120px solid transparent;
+  border-bottom: 35px solid #ffffff;
+  border-left: 90px solid transparent;
 }
 
 /* ==========================================
-   INDEX.HTML - MAIN CONTENT & CARDS
+   CONTENT & CARDS
    ========================================== */
 .content-container {
-  padding-top: 40px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 40px;
 }
 
 .category-block {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .category-title {
   display: flex;
   align-items: center;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 900;
-  letter-spacing: 1px;
   color: var(--text-dark);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .red-triangle {
-  display: inline-block;
   width: 0;
   height: 0;
-  border-bottom: 20px solid var(--primary-red);
-  border-left: 20px solid transparent;
-  margin-right: 12px;
+  border-bottom: 16px solid var(--primary-red);
+  border-left: 16px solid transparent;
+  margin-right: 10px;
 }
 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  gap: 12px;
 }
 
 .card-item {
@@ -144,52 +140,33 @@ body {
   text-align: center;
 }
 
-.bvb-logo {
-  width: 80px;
-  height: 80px;
-  background-color: var(--yellow-accent);
-  border: 4px solid #000000;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: 900;
-  font-size: 1.1rem;
-  line-height: 1;
-  color: #000;
-  margin-bottom: 12px;
-}
-
-.bvb-logo small {
-  font-size: 0.75rem;
+.club-logo-img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  margin-bottom: 8px;
 }
 
 .card-text {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: var(--primary-red);
-  line-height: 1.2;
-}
-
-.card-text strong {
-  font-weight: 800;
+  line-height: 1.1;
 }
 
 /* ==========================================
-   INDEX.HTML - FOOTER BANNER
+   FOOTER BANNER
    ========================================== */
 .footer-banner {
   background-color: var(--primary-red);
   color: var(--text-light);
-  padding: 40px 0;
+  padding: 30px 0 45px;
   position: relative;
 }
 
 .footer-banner h2 {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: 0.5px;
+  line-height: 1.2;
 }
 
 .footer-cutout {
@@ -198,32 +175,28 @@ body {
   right: 0;
   width: 0;
   height: 0;
-  border-bottom: 50px solid #222222;
-  border-left: 140px solid transparent;
+  border-bottom: 35px solid #222222;
+  border-left: 90px solid transparent;
 }
 
 /* ==========================================
-   SUBMISSION.HTML - FORM & PAGE
+   SUBMISSION PAGE
    ========================================== */
-.submission-body {
-  background-color: #ffffff;
-}
-
 .top-nav {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: 16px;
 }
 
 .submission-wrapper {
   background-color: var(--primary-red);
   color: var(--text-light);
-  padding: 50px 0 80px;
+  padding: 30px 0 60px;
   position: relative;
 }
 
 .submission-card {
   display: flex;
-  gap: 60px;
+  flex-direction: row;
+  gap: 40px;
 }
 
 .submission-info {
@@ -231,27 +204,24 @@ body {
 }
 
 .submission-title {
-  font-size: 4rem;
+  font-size: 2.8rem;
   font-weight: 900;
-  margin-bottom: 25px;
-  line-height: 1;
+  margin-bottom: 18px;
 }
 
 .submission-text {
-  font-size: 0.95rem;
-  margin-bottom: 30px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
   line-height: 1.4;
-  opacity: 0.9;
 }
 
 .submission-deadline {
-  font-size: 1.2rem;
-  line-height: 1.3;
+  font-size: 1rem;
 }
 
 .submission-deadline strong {
-  font-size: 1.4rem;
-  font-weight: 900;
+  font-size: 1.1rem;
+  font-weight: 800;
 }
 
 .submission-form {
@@ -259,89 +229,81 @@ body {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .form-input {
   width: 100%;
-  padding: 10px 14px;
+  padding: 8px 12px;
   background: transparent;
-  border: 1.5px solid var(--border-light);
+  border: 1px solid var(--border-light);
   color: var(--text-light);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   outline: none;
 }
 
 .form-input::placeholder,
 .award-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.form-input:focus,
-.award-textarea:focus {
-  border-color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .awards-header {
-  margin-top: 25px;
-  margin-bottom: 15px;
+  margin: 20px 0 10px;
 }
 
 .awards-header h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 800;
 }
 
 .awards-header p {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   opacity: 0.85;
 }
 
 .award-item {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .custom-checkbox {
   display: flex;
   align-items: center;
-  position: relative;
   cursor: pointer;
-  margin-bottom: 8px;
-  font-size: 0.9rem;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
   font-weight: bold;
 }
 
 .custom-checkbox input {
-  opacity: 0;
-  position: absolute;
+  display: none;
 }
 
 .checkmark {
-  width: 16px;
-  height: 16px;
-  border: 1.5px solid var(--border-light);
-  margin-right: 10px;
-  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--border-light);
+  margin-right: 8px;
   position: relative;
+  display: inline-block;
 }
 
-.custom-checkbox input:checked ~ .checkmark::after {
+.custom-checkbox input:checked + .checkmark::after {
   content: '✓';
   position: absolute;
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   top: -3px;
   left: 2px;
 }
 
 .award-textarea {
   width: 100%;
-  height: 60px;
+  height: 50px;
   background: transparent;
-  border: 1.5px solid var(--border-light);
+  border: 1px solid var(--border-light);
   color: var(--text-light);
-  padding: 10px;
-  font-size: 0.85rem;
+  padding: 8px;
+  font-size: 0.8rem;
   resize: none;
   outline: none;
 }
@@ -349,26 +311,21 @@ body {
 .form-submit-container {
   display: flex;
   justify-content: flex-end;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .success-btn {
   background-color: #ffffff;
   color: #333333;
   border: none;
-  padding: 12px 25px;
-  font-size: 1.1rem;
+  padding: 10px 18px;
+  font-size: 0.95rem;
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.tick-icon {
-  font-size: 1.3rem;
-  font-weight: 900;
+  gap: 8px;
 }
 
 .submission-cutout {
@@ -377,46 +334,48 @@ body {
   right: 0;
   width: 0;
   height: 0;
-  border-bottom: 60px solid #ffffff;
-  border-left: 150px solid transparent;
+  border-bottom: 40px solid #ffffff;
+  border-left: 100px solid transparent;
 }
 
 /* ==========================================
-   RESPONSIVE DESIGN (MOBILE & TABLET)
+   RESPONSIVE DESIGN (MOBILE FIX)
    ========================================== */
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 16px 10px;
   }
 
   .submission-card {
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
   }
 
   .main-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .sub-title {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 
   .category-title {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
+  }
+
+  .club-logo-img {
+    width: 50px;
+    height: 50px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 420px) {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .submission-title {
-    font-size: 2.8rem;
-  }
-
-  .footer-banner h2 {
-    font-size: 1.4rem;
+    font-size: 2.2rem;
   }
 }
