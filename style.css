@@ -1,262 +1,422 @@
-/* Shared Stylesheet - style.css */
+/* ==========================================
+   GLOBAL RESET & VARIABLES
+   ========================================== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+  --primary-red: #802327;
+  --dark-red: #651a1e;
+  --text-dark: #111111;
+  --text-light: #ffffff;
+  --border-light: rgba(255, 255, 255, 0.6);
+  --yellow-accent: #fdd800;
 }
 
 body {
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px 0;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  line-height: 1.5;
 }
 
-/* Base Wrapper Matrix */
-.screen-container {
-    width: 100%;
-    max-width: 1000px;
-    background-color: #8B2626; /* Specific Red/Maroon theme */
-    position: relative;
-    overflow: hidden;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Unique Bottom Right Corner Cutout Effect */
-.angled-footer-cut {
-    position: relative;
-}
-.angled-footer-cut::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-bottom: 80px solid #f7f7f7; /* Matches body background */
-    border-left: 80px solid transparent;
-    pointer-events: none;
+/* ==========================================
+   INDEX.HTML - HERO SECTION & BUTTON
+   ========================================== */
+.hero-section {
+  background-color: var(--primary-red);
+  color: var(--text-light);
+  padding: 30px 0 60px;
+  position: relative;
 }
 
-/* Header/Top Area Logo */
-.top-header {
-    background-color: #ffffff;
-    padding: 15px 40px;
-    width: 100%;
-}
-.top-header .logo-img {
-    height: 70px;
-    width: auto;
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-/* SCREEN 1: SUBMISSION SPECIFIC LAYOUT */
-.submission-layout {
-    display: flex;
-    padding: 60px 50px 100px 50px;
-    color: #ffffff;
-    gap: 50px;
+.logo-icon {
+  width: 70px;
+  height: 70px;
 }
 
-.sub-left-column {
-    flex: 1;
-    padding-top: 40px;
+.goto-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: var(--primary-red);
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.sub-left-column h1 {
-    font-size: 3.5rem;
-    font-weight: 900;
-    margin-bottom: 25px;
-    letter-spacing: -1px;
+.goto-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
 }
 
-.sub-left-column p.description {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #000000; /* Black text under submission heading as requested */
-    margin-bottom: 30px;
-    max-width: 400px;
-    font-weight: 500;
+.main-title {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1;
 }
 
-.sub-left-column h2.deadline-title {
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: #000000;
-    line-height: 1.4;
+.sub-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 25px;
 }
 
-.sub-right-column {
-    flex: 1.2;
+.hero-desc {
+  font-size: 0.88rem;
+  margin-bottom: 18px;
+  max-width: 900px;
+  opacity: 0.95;
+  text-align: justify;
 }
 
-/* Form Styling */
-.input-group {
-    margin-bottom: 18px;
-}
-.input-group input[type="text"],
-.input-group input[type="email"],
-.award-textbox {
-    width: 100%;
-    background: transparent;
-    border: 2px solid #ffffff;
-    padding: 12px 15px;
-    color: #ffffff;
-    font-size: 0.9rem;
-    outline: none;
-}
-.input-group input::placeholder,
-.award-textbox::placeholder {
-    color: #dfdfdf;
+.hero-cutout {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 45px solid #ffffff;
+  border-left: 120px solid transparent;
 }
 
-.award-section-title {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #000000;
-    margin: 25px 0 5px 0;
-}
-.award-subtitle {
-    font-size: 0.75rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.award-row {
-    margin-bottom: 15px;
-}
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-.checkbox-container input {
-    margin-right: 10px;
-    accent-color: #8B2626;
-}
-.award-textbox {
-    background: rgba(0,0,0,0.05);
-    height: 65px;
-    resize: none;
-}
-
-/* Success Button Alert Styling */
-.success-banner {
-    background-color: #ffffff;
-    color: #000000;
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 35px;
-    margin-top: 20px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.success-banner span {
-    margin-right: 10px;
-    font-size: 1.3rem;
-}
-
-
-/* SCREEN 2: RED CARD SPECIFIC LAYOUT */
-.redcard-hero {
-    padding: 40px 50px 50px 50px;
-    color: #ffffff;
-}
-.redcard-hero h1 {
-    font-size: 3.2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    line-height: 1;
-}
-.redcard-hero h2 {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #000000;
-    margin-top: 5px;
-    margin-bottom: 25px;
-}
-.redcard-hero p {
-    font-size: 0.85rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    max-width: 850px;
-    text-align: justify;
-}
-
-/* White Matrix Grid Content Area */
-.white-content-section {
-    background-color: #ffffff;
-    padding: 50px;
+/* ==========================================
+   INDEX.HTML - MAIN CONTENT & CARDS
+   ========================================== */
+.content-container {
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .category-block {
-    margin-bottom: 45px;
+  margin-bottom: 40px;
 }
+
 .category-title {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: #000000;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-}
-.category-title::before {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 18px 14px;
-    border-color: transparent transparent #8B2626 transparent;
-    margin-right: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
 }
 
-/* 5 Column Grid System for Logos */
-.logo-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    text-align: center;
+.red-triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid var(--primary-red);
+  border-left: 20px solid transparent;
+  margin-right: 12px;
 }
-.grid-item {
-    display: flex;
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bvb-logo {
+  width: 80px;
+  height: 80px;
+  background-color: var(--yellow-accent);
+  border: 4px solid #000000;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.bvb-logo small {
+  font-size: 0.75rem;
+}
+
+.card-text {
+  font-size: 0.85rem;
+  color: var(--primary-red);
+  line-height: 1.2;
+}
+
+.card-text strong {
+  font-weight: 800;
+}
+
+/* ==========================================
+   INDEX.HTML - FOOTER BANNER
+   ========================================== */
+.footer-banner {
+  background-color: var(--primary-red);
+  color: var(--text-light);
+  padding: 40px 0;
+  position: relative;
+}
+
+.footer-banner h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.footer-cutout {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid #222222;
+  border-left: 140px solid transparent;
+}
+
+/* ==========================================
+   SUBMISSION.HTML - FORM & PAGE
+   ========================================== */
+.submission-body {
+  background-color: #ffffff;
+}
+
+.top-nav {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.submission-wrapper {
+  background-color: var(--primary-red);
+  color: var(--text-light);
+  padding: 50px 0 80px;
+  position: relative;
+}
+
+.submission-card {
+  display: flex;
+  gap: 60px;
+}
+
+.submission-info {
+  flex: 1;
+}
+
+.submission-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 25px;
+  line-height: 1;
+}
+
+.submission-text {
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.submission-deadline {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.submission-deadline strong {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.submission-form {
+  flex: 1.2;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: 1.5px solid var(--border-light);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.form-input::placeholder,
+.award-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.form-input:focus,
+.award-textarea:focus {
+  border-color: #ffffff;
+}
+
+.awards-header {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.awards-header h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.awards-header p {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.award-item {
+  margin-bottom: 15px;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkmark {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--border-light);
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.custom-checkbox input:checked ~ .checkmark::after {
+  content: '✓';
+  position: absolute;
+  color: #fff;
+  font-size: 12px;
+  top: -3px;
+  left: 2px;
+}
+
+.award-textarea {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: 1.5px solid var(--border-light);
+  color: var(--text-light);
+  padding: 10px;
+  font-size: 0.85rem;
+  resize: none;
+  outline: none;
+}
+
+.form-submit-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.success-btn {
+  background-color: #ffffff;
+  color: #333333;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tick-icon {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.submission-cutout {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 60px solid #ffffff;
+  border-left: 150px solid transparent;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================== */
+@media (max-width: 850px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .submission-card {
     flex-direction: column;
-    align-items: center;
-}
-.grid-item img {
-    width: 75px;
-    height: 75px;
-    object-fit: contain;
-    margin-bottom: 12px;
-}
-.grid-item .title-bold {
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: #8B2626;
-    text-transform: uppercase;
-}
-.grid-item .desc-light {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: #000000;
+    gap: 30px;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .sub-title {
+    font-size: 1.4rem;
+  }
+
+  .category-title {
+    font-size: 1.7rem;
+  }
 }
 
-/* Red Card Bottom Footer Panel */
-.redcard-footer {
-    background-color: #8B2626;
-    padding: 50px;
-    color: #ffffff;
-}
-.redcard-footer h3 {
-    font-size: 1.8rem;
-    font-weight: 900;
-    line-height: 1.2;
-    text-transform: uppercase;
-    max-width: 700px;
+@media (max-width: 500px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .submission-title {
+    font-size: 2.8rem;
+  }
+
+  .footer-banner h2 {
+    font-size: 1.4rem;
+  }
 }
