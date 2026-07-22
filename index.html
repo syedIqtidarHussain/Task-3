@@ -16,7 +16,6 @@
       background-color: #ffffff;
       color: #333333;
       font-family: Arial, Helvetica, sans-serif;
-      /* Page structure to lock footer at bottom */
       display: flex;
       flex-direction: column;
     }
@@ -25,93 +24,96 @@
       box-sizing: border-box;
     }
 
-    /* Color Variables */
     :root {
       --maroon-bg: #8B262A;
       --text-white: #ffffff;
-      --border-light: rgba(255, 255, 255, 0.4);
     }
 
     /* Top Hero Section */
     .hero-section {
       background-color: var(--maroon-bg);
       color: var(--text-white);
-      padding: 40px 8% 50px 8%;
+      padding: 25px 8% 35px 8%;
       width: 100vw;
       position: relative;
       left: 50%;
       right: 50%;
       margin-left: -50vw;
       margin-right: -50vw;
-      /* Exact right corner cut */
       clip-path: polygon(
         0 0, 
         100% 0, 
-        100% calc(100% - 70px), 
-        calc(100% - 100px) 100%, 
+        100% calc(100% - 50px), 
+        calc(100% - 80px) 100%, 
         0 100%
       ) !important;
     }
 
-    .logo {
-      width: 55px;
-      height: 55px;
+    .logo-icon {
+      width: 35px;
+      height: 35px;
+      background: #ffffff;
+      color: var(--maroon-bg);
       border-radius: 50%;
-      margin-bottom: 20px;
-      object-fit: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
     }
 
     .hero-title {
-      font-size: 2.3rem;
+      font-size: 1.8rem;
       font-weight: 800;
       letter-spacing: 1px;
-      margin-bottom: 5px;
+      margin: 0 0 4px 0;
     }
 
     .hero-subtitle {
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       opacity: 0.9;
-      margin-bottom: 25px;
+      margin: 0 0 15px 0;
     }
 
     .hero-description {
-      font-size: 0.82rem;
-      line-height: 1.6;
+      font-size: 0.75rem;
+      line-height: 1.4;
       max-width: 850px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       opacity: 0.88;
     }
 
-    /* Main Content Container */
+    /* Main Content Container - Compact Spacing */
     .content-container {
-      padding: 40px 8%;
+      padding: 20px 8%;
       width: 100%;
-      flex: 1; /* Automatically expands and pushes footer to page bottom */
+      flex: 1;
     }
 
     .category-row {
-      margin-bottom: 35px;
+      margin-bottom: 18px;
     }
 
     .category-title {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       font-weight: bold;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .category-title::before {
       content: "►";
-      font-size: 0.6rem;
+      font-size: 0.5rem;
     }
 
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
+      gap: 12px;
     }
 
     .card {
@@ -119,54 +121,54 @@
     }
 
     .card img {
-      width: 55px;
-      height: 55px;
+      width: 38px;
+      height: 38px;
       object-fit: contain;
-      margin-bottom: 10px;
+      margin-bottom: 4px;
     }
 
     .card-title {
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       font-weight: bold;
       color: #444444;
     }
 
     .card-desc {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       color: #666666;
     }
 
-    /* Footer Banner Section (Full bottom width, zero gap, matched cut) */
+    /* Footer Banner - Uper shifted & zero bottom gap */
     .footer-banner {
       background-color: var(--maroon-bg);
       color: var(--text-white);
-      padding: 50px 8% 80px 8%;
+      padding: 25px 8% 35px 8%;
       width: 100vw;
       position: relative;
       left: 50%;
       right: 50%;
       margin-left: -50vw;
       margin-right: -50vw;
+      margin-top: 10px;
       margin-bottom: 0 !important;
-      margin-top: auto;
       clip-path: polygon(
         0 0, 
         100% 0, 
-        100% calc(100% - 70px), 
-        calc(100% - 100px) 100%, 
+        100% calc(100% - 50px), 
+        calc(100% - 80px) 100%, 
         0 100%
       ) !important;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 20px;
+      gap: 12px;
     }
 
     .footer-text {
-      font-size: 1.05rem;
+      font-size: 0.85rem;
       font-weight: bold;
       text-transform: uppercase;
-      line-height: 1.4;
+      line-height: 1.3;
       margin: 0;
       max-width: 800px;
     }
@@ -175,8 +177,8 @@
       display: inline-block;
       background-color: #ffffff;
       color: #000000;
-      padding: 10px 18px;
-      font-size: 0.75rem;
+      padding: 8px 14px;
+      font-size: 0.7rem;
       font-weight: bold;
       text-decoration: none;
       text-transform: uppercase;
@@ -189,7 +191,7 @@
 
   <!-- Top Hero Section -->
   <header class="hero-section">
-    <img src="logo.png" alt="Logo" class="logo">
+    <div class="logo-icon">RC</div>
     <h1 class="hero-title">RED CARD 2018</h1>
     <p class="hero-subtitle">China Digital Football Awards</p>
     <p class="hero-description">
@@ -208,27 +210,27 @@
       <h2 class="category-title">BEST CLUBS</h2>
       <div class="cards-grid">
         <div class="card">
-          <img src="bvb.png" alt="BVB">
+          <img src="https://api.iconify.design/simple-icons:borussiadortmund.svg?color=%23fde100" alt="BVB">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="bundesliga.png" alt="Bundesliga">
+          <img src="https://api.iconify.design/simple-icons:bundesliga.svg?color=%23d10214" alt="Bundesliga">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="chelsea.png" alt="Chelsea">
+          <img src="https://api.iconify.design/simple-icons:chelsea.svg?color=%23034694" alt="Chelsea">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="psg.png" alt="PSG">
+          <img src="https://api.iconify.design/simple-icons:parissaintgermain.svg?color=%23004170" alt="PSG">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="arsenal.png" alt="Arsenal">
+          <img src="https://api.iconify.design/simple-icons:arsenal.svg?color=%23ef0107" alt="Arsenal">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
@@ -240,27 +242,27 @@
       <h2 class="category-title">BEST CLUBS</h2>
       <div class="cards-grid">
         <div class="card">
-          <img src="bvb.png" alt="BVB">
+          <img src="https://api.iconify.design/simple-icons:borussiadortmund.svg?color=%23fde100" alt="BVB">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="bundesliga.png" alt="Bundesliga">
+          <img src="https://api.iconify.design/simple-icons:bundesliga.svg?color=%23d10214" alt="Bundesliga">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="chelsea.png" alt="Chelsea">
+          <img src="https://api.iconify.design/simple-icons:chelsea.svg?color=%23034694" alt="Chelsea">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="psg.png" alt="PSG">
+          <img src="https://api.iconify.design/simple-icons:parissaintgermain.svg?color=%23004170" alt="PSG">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="arsenal.png" alt="Arsenal">
+          <img src="https://api.iconify.design/simple-icons:arsenal.svg?color=%23ef0107" alt="Arsenal">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
@@ -272,27 +274,27 @@
       <h2 class="category-title">BEST CLUBS</h2>
       <div class="cards-grid">
         <div class="card">
-          <img src="bvb.png" alt="BVB">
+          <img src="https://api.iconify.design/simple-icons:borussiadortmund.svg?color=%23fde100" alt="BVB">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="bundesliga.png" alt="Bundesliga">
+          <img src="https://api.iconify.design/simple-icons:bundesliga.svg?color=%23d10214" alt="Bundesliga">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="chelsea.png" alt="Chelsea">
+          <img src="https://api.iconify.design/simple-icons:chelsea.svg?color=%23034694" alt="Chelsea">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="psg.png" alt="PSG">
+          <img src="https://api.iconify.design/simple-icons:parissaintgermain.svg?color=%23004170" alt="PSG">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="arsenal.png" alt="Arsenal">
+          <img src="https://api.iconify.design/simple-icons:arsenal.svg?color=%23ef0107" alt="Arsenal">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
@@ -304,27 +306,27 @@
       <h2 class="category-title">BEST CLUBS</h2>
       <div class="cards-grid">
         <div class="card">
-          <img src="bvb.png" alt="BVB">
+          <img src="https://api.iconify.design/simple-icons:borussiadortmund.svg?color=%23fde100" alt="BVB">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="bundesliga.png" alt="Bundesliga">
+          <img src="https://api.iconify.design/simple-icons:bundesliga.svg?color=%23d10214" alt="Bundesliga">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="chelsea.png" alt="Chelsea">
+          <img src="https://api.iconify.design/simple-icons:chelsea.svg?color=%23034694" alt="Chelsea">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="psg.png" alt="PSG">
+          <img src="https://api.iconify.design/simple-icons:parissaintgermain.svg?color=%23004170" alt="PSG">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="arsenal.png" alt="Arsenal">
+          <img src="https://api.iconify.design/simple-icons:arsenal.svg?color=%23ef0107" alt="Arsenal">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
@@ -336,27 +338,27 @@
       <h2 class="category-title">BEST CLUBS</h2>
       <div class="cards-grid">
         <div class="card">
-          <img src="bvb.png" alt="BVB">
+          <img src="https://api.iconify.design/simple-icons:borussiadortmund.svg?color=%23fde100" alt="BVB">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="bundesliga.png" alt="Bundesliga">
+          <img src="https://api.iconify.design/simple-icons:bundesliga.svg?color=%23d10214" alt="Bundesliga">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="chelsea.png" alt="Chelsea">
+          <img src="https://api.iconify.design/simple-icons:chelsea.svg?color=%23034694" alt="Chelsea">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="psg.png" alt="PSG">
+          <img src="https://api.iconify.design/simple-icons:parissaintgermain.svg?color=%23004170" alt="PSG">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="arsenal.png" alt="Arsenal">
+          <img src="https://api.iconify.design/simple-icons:arsenal.svg?color=%23ef0107" alt="Arsenal">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
