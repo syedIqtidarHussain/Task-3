@@ -1,14 +1,16 @@
-/* General Reset */
-* {
+/* Base Reset - Fixes full width spacing */
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #333333;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  background-color: #ffffff;
-  color: #333;
+* {
+  box-sizing: border-box;
 }
 
 /* Color Variables */
@@ -19,15 +21,16 @@ body {
 }
 
 /* =======================================
-   INDEX PAGE LAYOUT (Main Page)
+   INDEX PAGE LAYOUT
    ======================================= */
 
-/* Header Section with Angled Bottom Right */
+/* Top Hero Section with Angled Corner Cut */
 .hero-section {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 40px 10%;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+  padding: 40px 10% 60px 10%;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 82%, 92% 100%, 0 100%);
 }
 
 .logo {
@@ -35,6 +38,7 @@ body {
   height: 50px;
   border-radius: 50%;
   margin-bottom: 20px;
+  object-fit: contain;
 }
 
 .hero-title {
@@ -71,9 +75,10 @@ body {
   border-radius: 2px;
 }
 
-/* Categories & Grid Section */
+/* Grid & Cards Section */
 .content-container {
   padding: 40px 10%;
+  width: 100%;
 }
 
 .category-row {
@@ -115,24 +120,26 @@ body {
 .card-title {
   font-size: 0.75rem;
   font-weight: bold;
-  color: #444;
+  color: #444444;
 }
 
 .card-desc {
   font-size: 0.7rem;
-  color: #666;
+  color: #666666;
 }
 
-/* Footer Banner Fix */
+/* Footer Banner (Full Width with Bottom-Right Angled Cut) */
 .footer-banner {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 35px 10%;
+  padding: 40px 10% 60px 10%;
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.4;
   width: 100%;
+  box-sizing: border-box;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 92% 100%, 0 100%);
 }
 
 /* =======================================
@@ -142,12 +149,14 @@ body {
 .form-header {
   padding: 20px 10%;
   background-color: #ffffff;
+  width: 100%;
 }
 
 .form-page-container {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 50px 10%;
+  padding: 50px 10% 80px 10%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 50px;
@@ -156,13 +165,14 @@ body {
 
 .form-left-info {
   flex: 1;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .form-main-heading {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .form-info-text {
@@ -244,17 +254,17 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.btn-success-box {
+/* Submit Button & Status Styling */
+.btn-submit, .btn-success-box {
+  width: 100%;
   background-color: #ffffff;
-  color: #2e7d32;
-  text-align: center;
+  color: #000000;
+  border: none;
   padding: 12px;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
   border-radius: 2px;
-  margin-top: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  text-align: center;
 }
