@@ -4,26 +4,212 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Submission - Red Card 2018</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="submission-body">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <header class="form-header">
-    <img src="logo.png" alt="Logo" class="logo" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%238B262A\'/><path d=\'M30 50 L45 65 L70 35\' stroke=\'white\' stroke-width=\'8\' fill=\'none\'/></svg>'">
+    body {
+      background-color: #ffffff;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #ffffff;
+    }
+
+    /* Top White Header with Character Logo */
+    .header-logo-container {
+      padding: 20px 0 20px 8%;
+      background-color: #ffffff;
+    }
+
+    .character-logo {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background-color: #8B262A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Red Maroon Main Form Container */
+    .form-hero-wrapper {
+      background-color: #8B262A;
+      width: 100%;
+      padding: 50px 8% 90px 8%;
+      display: flex;
+      justify-content: space-between;
+      gap: 60px;
+      /* Bottom right diagonal cut-out corner */
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 90px), calc(100% - 110px) 100%, 0 100%);
+    }
+
+    /* Left Text Content */
+    .left-content {
+      flex: 1;
+      max-width: 450px;
+    }
+
+    .main-title {
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 25px;
+      margin-top: 40px;
+    }
+
+    .info-paragraph {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .deadline-heading {
+      font-size: 1.1rem;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    /* Right Form Content */
+    .right-form-container {
+      flex: 1.2;
+      max-width: 500px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    /* Form Input Fields with White Border and Thicker Padding */
+    .form-input {
+      width: 100%;
+      padding: 10px 14px;
+      background-color: rgba(0, 0, 0, 0.15);
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      font-size: 0.82rem;
+      outline: none;
+    }
+
+    .form-input::placeholder {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .awards-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-top: 25px;
+      margin-bottom: 4px;
+    }
+
+    .awards-subtitle {
+      font-size: 0.7rem;
+      opacity: 0.85;
+      margin-bottom: 18px;
+    }
+
+    .award-block {
+      margin-bottom: 15px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      accent-color: #ffffff;
+      width: 14px;
+      height: 14px;
+    }
+
+    .form-textarea {
+      width: 100%;
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.15);
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      padding: 10px 14px;
+      font-size: 0.8rem;
+      resize: none;
+      outline: none;
+    }
+
+    .form-textarea::placeholder {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* White Button */
+    .btn-submission-success {
+      width: 100%;
+      background-color: #ffffff;
+      color: #333333;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 25px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Mobile Responsive Adjustment */
+    @media (max-width: 768px) {
+      .form-hero-wrapper {
+        flex-direction: column;
+        gap: 30px;
+        clip-path: none;
+      }
+      .main-title {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top White Section with SVG Character Logo -->
+  <header class="header-logo-container">
+    <div class="character-logo">
+      <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4"/>
+        <path d="M30 40 C 35 25, 65 25, 70 40 L75 45 C75 45, 25 45, 25 45 Z" fill="white"/>
+        <circle cx="40" cy="55" r="3" fill="white"/>
+        <circle cx="60" cy="55" r="3" fill="white"/>
+        <path d="M40 70 Q 50 80 60 70" stroke="white" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
   </header>
 
-  <main class="form-page-container">
-    <div class="form-left-info">
-      <h1 class="form-main-heading">Submission</h1>
-      <p class="form-info-text">
+  <!-- Red Hero Section -->
+  <main class="form-hero-wrapper">
+    
+    <!-- Left Column: Title & Information -->
+    <div class="left-content">
+      <h1 class="main-title">Submission</h1>
+      <p class="info-paragraph">
         All details of submissions will be kept strictly private and confidential by Mailman and will not be used for any purpose other than judging Red Card 2018 winners.
       </p>
-      <p class="form-deadline-text">
-        Applications will close on the 15th December 2017
-      </p>
+      <h2 class="deadline-heading">
+        Applications will close on the<br>15th December 2017
+      </h2>
     </div>
 
-    <div class="form-right-container">
+    <!-- Right Column: Form Inputs -->
+    <div class="right-form-container">
       <form>
         <div class="form-group">
           <input type="text" class="form-input" placeholder="Name">
@@ -35,50 +221,58 @@
           <input type="text" class="form-input" placeholder="Organisation">
         </div>
 
-        <h3 class="awards-section-title">Which Award</h3>
-        <p class="awards-instruction">
-          (Please tick and provide details for all of the awards you would like to be nominated for)
-        </p>
+        <h3 class="awards-title">Which Award</h3>
+        <p class="awards-subtitle">(Please tick and provide details for all of the awards you would like to be nominated for)</p>
 
-        <div class="award-item">
-          <label class="award-checkbox-label">
+        <!-- Award Item 1 -->
+        <div class="award-block">
+          <label class="checkbox-label">
             <input type="checkbox" checked> Best Livestream
           </label>
           <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
         </div>
 
-        <div class="award-item">
-          <label class="award-checkbox-label">
+        <!-- Award Item 2 -->
+        <div class="award-block">
+          <label class="checkbox-label">
             <input type="checkbox"> Best Tour Campaign
           </label>
           <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
         </div>
 
-        <div class="award-item">
-          <label class="award-checkbox-label">
+        <!-- Award Item 3 -->
+        <div class="award-block">
+          <label class="checkbox-label">
             <input type="checkbox"> Best Sponsor Activation
           </label>
           <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
         </div>
 
-        <div class="award-item">
-          <label class="award-checkbox-label">
+        <!-- Award Item 4 -->
+        <div class="award-block">
+          <label class="checkbox-label">
             <input type="checkbox"> Best Use of Technology
           </label>
           <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
         </div>
 
-        <div class="award-item">
-          <label class="award-checkbox-label">
+        <!-- Award Item 5 -->
+        <div class="award-block">
+          <label class="checkbox-label">
             <input type="checkbox"> Best Online Campaign
           </label>
           <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
         </div>
 
-        <button type="button" class="btn-submit">&#10003; Submission Successful</button>
+        <!-- Submit Button -->
+        <button type="button" class="btn-submission-success">
+          <span style="font-size: 1.2rem;">&#10003;</span> Submission Successful
+        </button>
       </form>
     </div>
+
   </main>
 
 </body>
 </html>
+
