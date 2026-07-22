@@ -1,8 +1,9 @@
-/* Base Reset - Fixes full width spacing */
+/* Base Reset */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
   background-color: #ffffff;
   color: #333333;
@@ -24,13 +25,18 @@ html, body {
    INDEX PAGE LAYOUT
    ======================================= */
 
-/* Top Hero Section with Angled Corner Cut */
+/* Top Hero Section with Angled Bottom-Right Corner Cut */
 .hero-section {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 40px 10% 60px 10%;
-  width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 82%, 92% 100%, 0 100%);
+  padding: 40px 8% 70px 8%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 92% 100%, 0 100%);
 }
 
 .logo {
@@ -62,22 +68,9 @@ html, body {
   opacity: 0.85;
 }
 
-.btn-submission {
-  display: inline-block;
-  background-color: #ffffff;
-  color: #000000;
-  padding: 10px 18px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  margin-top: 15px;
-  border-radius: 2px;
-}
-
-/* Grid & Cards Section */
+/* Main Content Grid Container */
 .content-container {
-  padding: 40px 10%;
+  padding: 40px 8%;
   width: 100%;
 }
 
@@ -128,17 +121,21 @@ html, body {
   color: #666666;
 }
 
-/* Footer Banner (Full Width with Bottom-Right Angled Cut) */
+/* Footer Banner (Full Width Bleed with Bottom-Right Corner Cut) */
 .footer-banner {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 40px 10% 60px 10%;
+  padding: 40px 8% 70px 8%;
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.4;
-  width: 100%;
-  box-sizing: border-box;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 92% 100%, 0 100%);
 }
 
@@ -147,7 +144,7 @@ html, body {
    ======================================= */
 
 .form-header {
-  padding: 20px 10%;
+  padding: 20px 8%;
   background-color: #ffffff;
   width: 100%;
 }
@@ -155,8 +152,14 @@ html, body {
 .form-page-container {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 50px 10% 80px 10%;
-  width: 100%;
+  padding: 50px 8% 80px 8%;
+  width: 100vw;
+  min-height: calc(100vh - 90px);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   display: flex;
   justify-content: space-between;
   gap: 50px;
@@ -254,7 +257,6 @@ html, body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Submit Button & Status Styling */
 .btn-submit, .btn-success-box {
   width: 100%;
   background-color: #ffffff;
