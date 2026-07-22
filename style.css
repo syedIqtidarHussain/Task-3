@@ -25,64 +25,71 @@ html, body {
    INDEX PAGE LAYOUT
    ======================================= */
 
-/* Top Hero Section (Cut matched to Submission Form & Height stretched) */
+/* Top Hero Section - Exact Right Corner Cut */
 .hero-section {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 50px 8% 100px 8%;
+  padding: 40px 8% 50px 8%;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 82% 100%, 0 100%);
+  /* Sirf bottom-right corner par 60px x 70px ka exact cut */
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 60px), 
+    calc(100% - 70px) 100%, 
+    0 100%
+  );
 }
 
 .logo {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   object-fit: contain;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 800;
   letter-spacing: 1px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .hero-subtitle {
-  font-size: 1rem;
+  font-size: 0.95rem;
   opacity: 0.9;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .hero-description {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   line-height: 1.6;
-  max-width: 900px;
-  margin-bottom: 18px;
+  max-width: 850px;
+  margin-bottom: 15px;
   opacity: 0.88;
 }
 
-/* Main Content Section */
+/* Main Content Grid */
 .content-container {
-  padding: 50px 8%;
+  padding: 40px 8%;
   width: 100%;
 }
 
 .category-row {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .category-title {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -90,7 +97,7 @@ html, body {
 
 .category-title::before {
   content: "►";
-  font-size: 0.65rem;
+  font-size: 0.6rem;
 }
 
 .cards-grid {
@@ -104,8 +111,8 @@ html, body {
 }
 
 .card img {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   object-fit: contain;
   margin-bottom: 10px;
 }
@@ -121,26 +128,33 @@ html, body {
   color: #666666;
 }
 
-/* Footer Banner (Stretched height with matching cut) */
+/* Footer Banner - Identical Corner Cut */
 .footer-banner {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 60px 8% 100px 8%;
+  padding: 50px 8% 60px 8%;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 82% 100%, 0 100%);
+  /* Exact same corner triangle cut as hero section */
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 60px), 
+    calc(100% - 70px) 100%, 
+    0 100%
+  );
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 25px;
+  gap: 20px;
 }
 
 .footer-text {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.4;
@@ -152,8 +166,8 @@ html, body {
   display: inline-block;
   background-color: #ffffff;
   color: #000000;
-  padding: 12px 22px;
-  font-size: 0.8rem;
+  padding: 10px 18px;
+  font-size: 0.75rem;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -162,11 +176,11 @@ html, body {
 }
 
 /* =======================================
-   SUBMISSION FORM PAGE
+   SUBMISSION FORM PAGE LAYOUT
    ======================================= */
 
 .form-header {
-  padding: 25px 8%;
+  padding: 20px 8%;
   background-color: #ffffff;
   width: 100%;
 }
@@ -174,7 +188,7 @@ html, body {
 .form-page-container {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 60px 8% 140px 8%;
+  padding: 50px 8% 80px 8%;
   width: 100vw;
   min-height: calc(100vh - 90px);
   position: relative;
@@ -185,35 +199,41 @@ html, body {
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  /* Exact angled cut matching the image provided */
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 82% 100%, 0 100%);
+  /* Exact corner cut for Submission Form as well */
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 80px), 
+    calc(100% - 95px) 100%, 
+    0 100%
+  );
 }
 
 .form-left-info {
   flex: 1;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .form-main-heading {
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .form-info-text {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   line-height: 1.5;
   opacity: 0.85;
-  max-width: 380px;
-  margin-bottom: 35px;
+  max-width: 360px;
+  margin-bottom: 30px;
 }
 
 .form-deadline-text {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  max-width: 340px;
+  max-width: 320px;
 }
 
 .form-right-container {
@@ -226,7 +246,7 @@ html, body {
 
 .form-input {
   width: 100%;
-  padding: 12px 14px;
+  padding: 10px 12px;
   background: transparent;
   border: 1px solid var(--border-light);
   color: #ffffff;
@@ -239,27 +259,27 @@ html, body {
 }
 
 .awards-section-title {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: bold;
   margin-top: 25px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .awards-instruction {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   opacity: 0.8;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .award-item {
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .award-checkbox-label {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: bold;
   margin-bottom: 8px;
   cursor: pointer;
@@ -267,12 +287,12 @@ html, body {
 
 .form-textarea {
   width: 100%;
-  height: 70px;
+  height: 65px;
   background: transparent;
   border: 1px solid var(--border-light);
   color: #ffffff;
   padding: 10px;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   resize: none;
   outline: none;
 }
