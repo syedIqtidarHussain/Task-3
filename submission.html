@@ -3,20 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Submission Form - RED CARD</title>
+  <title>Submission - Red Card 2018</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="submission-body">
 
-  <!-- Top Logo Section -->
-  <div class="form-header">
-    <img src="images/logo.png" alt="Red Card Logo" class="logo" style="margin-bottom: 0;">
-  </div>
+  <header class="form-header">
+    <img src="logo.png" alt="Logo" class="logo" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%238B262A\'/><path d=\'M30 50 L45 65 L70 35\' stroke=\'white\' stroke-width=\'8\' fill=\'none\'/></svg>'">
+  </header>
 
-  <!-- Form Main Section -->
   <main class="form-page-container">
-    
-    <!-- Left Column Text -->
     <div class="form-left-info">
       <h1 class="form-main-heading">Submission</h1>
       <p class="form-info-text">
@@ -27,10 +23,8 @@
       </p>
     </div>
 
-    <!-- Right Column Form Fields -->
     <div class="form-right-container">
-      <form action="#">
-        
+      <form>
         <div class="form-group">
           <input type="text" class="form-input" placeholder="Name">
         </div>
@@ -42,9 +36,10 @@
         </div>
 
         <h3 class="awards-section-title">Which Award</h3>
-        <p class="awards-instruction">(Please tick and provide details for all of the awards you would like to be nominated for)</p>
+        <p class="awards-instruction">
+          (Please tick and provide details for all of the awards you would like to be nominated for)
+        </p>
 
-        <!-- Award Item 1 -->
         <div class="award-item">
           <label class="award-checkbox-label">
             <input type="checkbox" checked> Best Livestream
@@ -52,7 +47,6 @@
           <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
         </div>
 
-        <!-- Award Item 2 -->
         <div class="award-item">
           <label class="award-checkbox-label">
             <input type="checkbox"> Best Tour Campaign
@@ -60,7 +54,6 @@
           <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
         </div>
 
-        <!-- Award Item 3 -->
         <div class="award-item">
           <label class="award-checkbox-label">
             <input type="checkbox"> Best Sponsor Activation
@@ -68,7 +61,6 @@
           <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
         </div>
 
-        <!-- Award Item 4 -->
         <div class="award-item">
           <label class="award-checkbox-label">
             <input type="checkbox"> Best Use of Technology
@@ -76,7 +68,6 @@
           <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
         </div>
 
-        <!-- Award Item 5 -->
         <div class="award-item">
           <label class="award-checkbox-label">
             <input type="checkbox"> Best Online Campaign
@@ -84,14 +75,9 @@
           <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
         </div>
 
-        <!-- Success Button/Status Box -->
-        <div class="btn-success-box">
-          ✓ Submission Successful
-        </div>
-
+        <button type="button" class="btn-submit">&#10003; Submission Successful</button>
       </form>
     </div>
-
   </main>
 
 </body>
