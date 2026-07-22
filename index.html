@@ -4,194 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red Card 2018</title>
-  
-  <style>
-    /* Base Reset */
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      min-height: 100vh;
-      overflow-x: hidden;
-      background-color: #ffffff;
-      color: #333333;
-      font-family: Arial, Helvetica, sans-serif;
-      display: flex;
-      flex-direction: column;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    :root {
-      --maroon-bg: #8B262A;
-      --text-white: #ffffff;
-    }
-
-    /* Top Hero Section */
-    .hero-section {
-      background-color: var(--maroon-bg);
-      color: var(--text-white);
-      padding: 25px 8% 35px 8%;
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      clip-path: polygon(
-        0 0, 
-        100% 0, 
-        100% calc(100% - 50px), 
-        calc(100% - 80px) 100%, 
-        0 100%
-      ) !important;
-    }
-
-    .logo-icon {
-      width: 35px;
-      height: 35px;
-      background: #ffffff;
-      color: var(--maroon-bg);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 0.8rem;
-      margin-bottom: 12px;
-    }
-
-    .hero-title {
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin: 0 0 4px 0;
-    }
-
-    .hero-subtitle {
-      font-size: 0.85rem;
-      opacity: 0.9;
-      margin: 0 0 15px 0;
-    }
-
-    .hero-description {
-      font-size: 0.75rem;
-      line-height: 1.4;
-      max-width: 850px;
-      margin-bottom: 10px;
-      opacity: 0.88;
-    }
-
-    /* Main Content Container - Compact Spacing */
-    .content-container {
-      padding: 20px 8%;
-      width: 100%;
-      flex: 1;
-    }
-
-    .category-row {
-      margin-bottom: 18px;
-    }
-
-    .category-title {
-      font-size: 0.8rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .category-title::before {
-      content: "►";
-      font-size: 0.5rem;
-    }
-
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-    }
-
-    .card {
-      text-align: center;
-    }
-
-    .card img {
-      width: 38px;
-      height: 38px;
-      object-fit: contain;
-      margin-bottom: 4px;
-    }
-
-    .card-title {
-      font-size: 0.68rem;
-      font-weight: bold;
-      color: #444444;
-    }
-
-    .card-desc {
-      font-size: 0.65rem;
-      color: #666666;
-    }
-
-    /* Footer Banner - Uper shifted & zero bottom gap */
-    .footer-banner {
-      background-color: var(--maroon-bg);
-      color: var(--text-white);
-      padding: 25px 8% 35px 8%;
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      margin-top: 10px;
-      margin-bottom: 0 !important;
-      clip-path: polygon(
-        0 0, 
-        100% 0, 
-        100% calc(100% - 50px), 
-        calc(100% - 80px) 100%, 
-        0 100%
-      ) !important;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .footer-text {
-      font-size: 0.85rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      line-height: 1.3;
-      margin: 0;
-      max-width: 800px;
-    }
-
-    .btn-goto-submission {
-      display: inline-block;
-      background-color: #ffffff;
-      color: #000000;
-      padding: 8px 14px;
-      font-size: 0.7rem;
-      font-weight: bold;
-      text-decoration: none;
-      text-transform: uppercase;
-      border-radius: 2px;
-      letter-spacing: 0.5px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Top Hero Section -->
   <header class="hero-section">
-    <div class="logo-icon">RC</div>
+    <img src="logo.png" alt="Logo" class="logo" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Football_PUEBLO.svg/100px-Football_PUEBLO.svg.png'">
     <h1 class="hero-title">RED CARD 2018</h1>
     <p class="hero-subtitle">China Digital Football Awards</p>
     <p class="hero-description">
@@ -210,27 +29,27 @@
       <h2 class="category-title">BEST CLUBS</h2>
       <div class="cards-grid">
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:borussiadortmund.svg?color=%23fde100" alt="BVB">
+          <img src="bvb.png" alt="BVB" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:bundesliga.svg?color=%23d10214" alt="Bundesliga">
+          <img src="bundesliga.png" alt="Bundesliga" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/d/df/Bundesliga_logo_%282017%29.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:chelsea.svg?color=%23034694" alt="Chelsea">
+          <img src="chelsea.png" alt="Chelsea" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:parissaintgermain.svg?color=%23004170" alt="PSG">
+          <img src="psg.png" alt="PSG" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:arsenal.svg?color=%23ef0107" alt="Arsenal">
+          <img src="arsenal.png" alt="Arsenal" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
@@ -242,27 +61,27 @@
       <h2 class="category-title">BEST CLUBS</h2>
       <div class="cards-grid">
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:borussiadortmund.svg?color=%23fde100" alt="BVB">
+          <img src="bvb.png" alt="BVB" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:bundesliga.svg?color=%23d10214" alt="Bundesliga">
+          <img src="bundesliga.png" alt="Bundesliga" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/d/df/Bundesliga_logo_%282017%29.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:chelsea.svg?color=%23034694" alt="Chelsea">
+          <img src="chelsea.png" alt="Chelsea" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:parissaintgermain.svg?color=%23004170" alt="PSG">
+          <img src="psg.png" alt="PSG" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:arsenal.svg?color=%23ef0107" alt="Arsenal">
+          <img src="arsenal.png" alt="Arsenal" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
@@ -274,27 +93,27 @@
       <h2 class="category-title">BEST CLUBS</h2>
       <div class="cards-grid">
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:borussiadortmund.svg?color=%23fde100" alt="BVB">
+          <img src="bvb.png" alt="BVB" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:bundesliga.svg?color=%23d10214" alt="Bundesliga">
+          <img src="bundesliga.png" alt="Bundesliga" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/d/df/Bundesliga_logo_%282017%29.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:chelsea.svg?color=%23034694" alt="Chelsea">
+          <img src="chelsea.png" alt="Chelsea" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:parissaintgermain.svg?color=%23004170" alt="PSG">
+          <img src="psg.png" alt="PSG" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:arsenal.svg?color=%23ef0107" alt="Arsenal">
+          <img src="arsenal.png" alt="Arsenal" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
@@ -306,27 +125,27 @@
       <h2 class="category-title">BEST CLUBS</h2>
       <div class="cards-grid">
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:borussiadortmund.svg?color=%23fde100" alt="BVB">
+          <img src="bvb.png" alt="BVB" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:bundesliga.svg?color=%23d10214" alt="Bundesliga">
+          <img src="bundesliga.png" alt="Bundesliga" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/d/df/Bundesliga_logo_%282017%29.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:chelsea.svg?color=%23034694" alt="Chelsea">
+          <img src="chelsea.png" alt="Chelsea" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:parissaintgermain.svg?color=%23004170" alt="PSG">
+          <img src="psg.png" alt="PSG" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:arsenal.svg?color=%23ef0107" alt="Arsenal">
+          <img src="arsenal.png" alt="Arsenal" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
@@ -338,27 +157,27 @@
       <h2 class="category-title">BEST CLUBS</h2>
       <div class="cards-grid">
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:borussiadortmund.svg?color=%23fde100" alt="BVB">
+          <img src="bvb.png" alt="BVB" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:bundesliga.svg?color=%23d10214" alt="Bundesliga">
+          <img src="bundesliga.png" alt="Bundesliga" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/d/df/Bundesliga_logo_%282017%29.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:chelsea.svg?color=%23034694" alt="Chelsea">
+          <img src="chelsea.png" alt="Chelsea" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:parissaintgermain.svg?color=%23004170" alt="PSG">
+          <img src="psg.png" alt="PSG" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
         <div class="card">
-          <img src="https://api.iconify.design/simple-icons:arsenal.svg?color=%23ef0107" alt="Arsenal">
+          <img src="arsenal.png" alt="Arsenal" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg'">
           <div class="card-title">Lorem ipsum</div>
           <div class="card-desc">Lorem</div>
         </div>
