@@ -1,125 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Submission - Red Card 2018</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Card Submission Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="submission-body">
+<body>
 
-  <header class="top-nav container">
-    <img src="logo-head.png" alt="Logo" class="main-logo-img">
-  </header>
-
-  <main class="submission-wrapper">
-    <div class="submission-card container">
-      
-      <!-- Left Column -->
-      <div class="submission-info">
-        <h1 class="submission-title">Submission</h1>
+    <div class="screen-container angled-footer-cut">
         
-        <p class="submission-text">
-          All details of submissions will be kept strictly private and confidential by Mailman and will not be used for any purpose other than judging Red Card 2018 winners.
-        </p>
-
-        <p class="submission-deadline">
-          Applications will close on the<br>
-          <strong>15th December 2017</strong>
-        </p>
-      </div>
-
-      <!-- Right Form Column -->
-      <form class="submission-form" action="#" method="POST">
-        
-        <div class="form-group">
-          <input type="text" placeholder="Name" class="form-input">
+        <!-- Header Logo -->
+        <div class="top-header">
+            <img src="./images/top-logo.png" alt="Red Card Logo" class="logo-img">
         </div>
 
-        <div class="form-group">
-          <input type="email" placeholder="Email Address" class="form-input">
-        </div>
+        <div class="submission-layout">
+            
+            <!-- Left Column -->
+            <div class="sub-left-column">
+                <h1>Submission</h1>
+                <p class="description">
+                    All details of submissions will be kept strictly private and confidential by Mailman and will not be used for any purpose other than judging Red Card 2018 winners.
+                </p>
+                <h2 class="deadline-title">
+                    Applications will close on the<br>15th December 2017
+                </h2>
+            </div>
 
-        <div class="form-group">
-          <input type="text" placeholder="Organisation" class="form-input">
-        </div>
+            <!-- Right Column Form -->
+            <div class="sub-right-column">
+                <form onsubmit="event.preventDefault();">
+                    
+                    <div class="input-group">
+                        <input type="text" placeholder="Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Organisation" required>
+                    </div>
 
-        <div class="awards-header">
-          <h3>Which Award</h3>
-          <p>(Please tick and provide details for all of the awards you would like to be nominated for)</p>
-        </div>
+                    <h3 class="award-section-title">Which Award</h3>
+                    <p class="award-subtitle">(Please tick and provide details for all of the awards you would like to be nominated for)</p>
 
-        <div class="award-item">
-          <label class="custom-checkbox">
-            <input type="checkbox" checked>
-            <span class="checkmark"></span>
-            <span class="award-label">Best Livestream</span>
-          </label>
-          <textarea placeholder="Description & Results (max. 150 words)" class="award-textarea"></textarea>
-        </div>
+                    <div class="award-row">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked> Best Livestream
+                        </label>
+                        <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
+                    </div>
 
-        <div class="award-item">
-          <label class="custom-checkbox">
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            <span class="award-label">Best Tour Campaign</span>
-          </label>
-          <textarea placeholder="Description & Results (max. 150 words)" class="award-textarea"></textarea>
-        </div>
+                    <div class="award-row">
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Best Tour Campaign
+                        </label>
+                        <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
+                    </div>
 
-        <div class="award-item">
-          <label class="custom-checkbox">
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            <span class="award-label">Best Sponsor Activation</span>
-          </label>
-          <textarea placeholder="Description & Results (max. 150 words)" class="award-textarea"></textarea>
-        </div>
+                    <div class="award-row">
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Best Sponsor Activation
+                        </label>
+                        <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
+                    </div>
 
-        <div class="award-item">
-          <label class="custom-checkbox">
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            <span class="award-label">Best Use of Technology</span>
-          </label>
-          <textarea placeholder="Description & Results (max. 150 words)" class="award-textarea"></textarea>
-        </div>
+                    <div class="award-row">
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Best Use of Technology
+                        </label>
+                        <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
+                    </div>
 
-        <div class="award-item">
-          <label class="custom-checkbox">
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            <span class="award-label">Best Online Campaign</span>
-          </label>
-          <textarea placeholder="Description & Results (max. 150 words)" class="award-textarea"></textarea>
-        </div>
+                    <div class="award-row">
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Best Online Campaign
+                        </label>
+                        <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
+                    </div>
 
-        <div class="form-submit-container">
-          <button type="submit" class="success-btn">
-            <span class="tick-icon">&#10003;</span> Submission Successful
-          </button>
-        </div>
+                    <div class="success-banner">
+                        <span>✓</span> Submission Successful
+                    </div>
 
-      </form>
+                </form>
+            </div>
+
+        </div>
     </div>
-  </main>
-
-  <!-- Touch Swipe Script: Right Swipe Se Index Page Par Wapis Jane Ke Liye -->
-  <script>
-    let touchstartX = 0;
-    let touchendX = 0;
-
-    document.addEventListener('touchstart', e => {
-      touchstartX = e.changedTouches[0].screenX;
-    });
-
-    document.addEventListener('touchend', e => {
-      touchendX = e.changedTouches[0].screenX;
-      if (touchendX - touchstartX > 60) {
-        window.location.href = 'index.html';
-      }
-    });
-  </script>
 
 </body>
 </html>
