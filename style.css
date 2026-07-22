@@ -1,231 +1,287 @@
-/* GLOBAL RESETS */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
-:root {
-  --primary-red: #802327;
-  --text-dark: #111111;
-  --text-light: #ffffff;
-  --border-light: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-  background-color: #ffffff;
-  color: var(--text-dark);
-  overflow-x: hidden;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-/* SLIDER VIEWPORT FOR TOUCH SWIPE */
-.slider-viewport {
-  display: flex;
-  width: 200vw;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+/* Screen Wrapper */
+.screen-container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #8B2626;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.page-section {
-  width: 100vw;
-  flex-shrink: 0;
+/* Bottom Angled Cut Cutout */
+.angled-footer-cut::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 80px solid #f7f7f7;
+    border-left: 80px solid transparent;
+    pointer-events: none;
 }
 
-.container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+.swipe-hint {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
-/* HEADER & EXACT CUTOUT EDGES */
-.hero-section {
-  background-color: var(--primary-red);
-  color: var(--text-light);
-  padding: 30px 0 70px;
-  position: relative;
-  /* Angled Cutout edge like assignment mockups */
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+/* --- DASHBOARD / REDCARD SECTION --- */
+.redcard-hero {
+    padding: 40px 30px 50px 30px;
+    color: #ffffff;
 }
 
-.header-top-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+.redcard-hero .logo-img {
+    height: 90px;
+    margin-bottom: 20px;
+    display: block;
 }
 
-.main-logo-img {
-  width: 55px;
-  height: 55px;
-  object-fit: contain;
-  display: block;
+.redcard-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1;
 }
 
-.main-title {
-  font-size: 2.5rem;
-  font-weight: 900;
-  line-height: 1;
+.redcard-hero h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #000000;
+    margin-top: 5px;
+    margin-bottom: 25px;
 }
 
-.sub-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 18px;
+.redcard-hero p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    max-width: 850px;
 }
 
-.hero-desc {
-  font-size: 0.85rem;
-  margin-bottom: 12px;
-  opacity: 0.95;
-  line-height: 1.45;
-  text-align: justify;
-}
-
-/* CONTENT & GRID */
-.content-container {
-  padding: 40px 20px;
+.white-content-section {
+    background-color: #ffffff;
+    padding: 30px 20px;
 }
 
 .category-block {
-  margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .category-title {
-  display: flex;
-  align-items: center;
-  font-size: 1.6rem;
-  font-weight: 900;
-  margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #000000;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.red-triangle {
-  width: 0;
-  height: 0;
-  border-bottom: 18px solid var(--primary-red);
-  border-left: 18px solid transparent;
-  margin-right: 12px;
+.category-title::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 16px 12px;
+    border-color: transparent transparent #8B2626 transparent;
+    margin-right: 10px;
 }
 
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    text-align: center;
 }
 
-.card-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* FIXED LOGO DISPLAY */
-.club-logo-img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 8px;
-  background-color: #fdd800; /* Yellow background fallback if BVB style */
-  border-radius: 50%;
-  padding: 4px;
-}
-
-.card-text {
-  font-size: 0.75rem;
-  color: var(--primary-red);
-  line-height: 1.2;
-}
-
-/* FOOTER BANNER CUTOUT */
-.footer-banner {
-  background-color: var(--primary-red);
-  color: var(--text-light);
-  padding: 35px 0 65px;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 82% 100%, 0 100%);
-}
-
-.footer-banner h2 {
-  font-size: 1.5rem;
-  font-weight: 900;
-  line-height: 1.2;
-}
-
-/* SUBMISSION PAGE STYLES */
-.top-nav {
-  padding: 20px;
-}
-
-.submission-wrapper {
-  background-color: var(--primary-red);
-  color: var(--text-light);
-  padding: 40px 0 80px;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 82% 100%, 0 100%);
-}
-
-.submission-card {
-  display: flex;
-  gap: 40px;
-}
-
-.submission-info { flex: 1; }
-.submission-form { flex: 1.2; }
-
-.submission-title {
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.form-group { margin-bottom: 12px; }
-
-.form-input, .award-textarea {
-  width: 100%;
-  padding: 10px;
-  background: transparent;
-  border: 1px solid var(--border-light);
-  color: #fff;
-  outline: none;
-}
-
-.award-textarea { height: 60px; resize: none; }
-
-.custom-checkbox {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-bottom: 6px;
-  font-weight: bold;
-}
-
-.form-submit-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
-
-.success-btn {
-  background-color: #fff;
-  color: #333;
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-/* RESPONSIVE AGILITY */
-@media (max-width: 768px) {
-  .cards-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .submission-card {
+.grid-item {
+    display: flex;
     flex-direction: column;
-  }
+    align-items: center;
 }
 
-@media (max-width: 480px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.grid-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.grid-item .title-bold {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #8B2626;
+    text-transform: uppercase;
+}
+
+.grid-item .desc-light {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.redcard-footer {
+    background-color: #8B2626;
+    padding: 40px 30px 100px 30px;
+    color: #ffffff;
+}
+
+.redcard-footer h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* --- SUBMISSION FORM SECTION --- */
+.top-header {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    width: 100%;
+}
+
+.top-header .logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.submission-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px 100px 20px;
+    color: #ffffff;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .submission-layout {
+        flex-direction: row;
+        padding: 50px 40px 120px 40px;
+    }
+}
+
+.sub-left-column {
+    flex: 1;
+}
+
+.sub-left-column h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.sub-left-column p.description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.sub-left-column h2.deadline-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #000000;
+    line-height: 1.4;
+}
+
+.sub-right-column {
+    flex: 1.2;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.award-textbox {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #ffffff;
+    padding: 10px 12px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.input-group input::placeholder,
+.award-textbox::placeholder {
+    color: #e0e0e0;
+}
+
+.award-section-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #000000;
+    margin: 20px 0 5px 0;
+}
+
+.award-subtitle {
+    font-size: 0.7rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.award-row {
+    margin-bottom: 12px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    margin-right: 8px;
+    accent-color: #8B2626;
+}
+
+.award-textbox {
+    background: rgba(0,0,0,0.1);
+    height: 55px;
+    resize: none;
+}
+
+.success-banner {
+    background-color: #ffffff;
+    color: #000000;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 25px;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.success-banner span {
+    margin-right: 8px;
 }
