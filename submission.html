@@ -3,104 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Card Submission Form</title>
+    <title>Submission Received | Keefer Law Firm PLC</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="screen-container angled-footer-cut" id="touchArea">
-        <div class="swipe-hint">👉 Swipe Right to go back to Dashboard</div>
-
-        <div class="top-header">
-            <img src="images/top-logo.png" alt="Red Card Logo" class="logo-img">
-        </div>
-
-        <div class="submission-layout">
-            <div class="sub-left-column">
-                <h1>Submission</h1>
-                <p class="description">
-                    All details of submissions will be kept strictly private and confidential by Mailman and will not be used for any purpose other than judging Red Card 2018 winners.
-                </p>
-                <h2 class="deadline-title">
-                    Applications will close on the<br>15th December 2017
-                </h2>
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="Keefer Law Firm Logo" class="site-logo-img">
+                </a>
             </div>
-
-            <div class="sub-right-column">
-                <form onsubmit="event.preventDefault();">
-                    <div class="input-group">
-                        <input type="text" placeholder="Name" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" placeholder="Organisation" required>
-                    </div>
-
-                    <h3 class="award-section-title">Which Award</h3>
-                    <p class="award-subtitle">(Please tick and provide details for all of the awards you would like to be nominated for)</p>
-
-                    <div class="award-row">
-                        <label class="checkbox-container">
-                            <input type="checkbox" checked> Best Livestream
-                        </label>
-                        <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
-                    </div>
-
-                    <div class="award-row">
-                        <label class="checkbox-container">
-                            <input type="checkbox"> Best Tour Campaign
-                        </label>
-                        <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
-                    </div>
-
-                    <div class="award-row">
-                        <label class="checkbox-container">
-                            <input type="checkbox"> Best Sponsor Activation
-                        </label>
-                        <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
-                    </div>
-
-                    <div class="award-row">
-                        <label class="checkbox-container">
-                            <input type="checkbox"> Best Use of Technology
-                        </label>
-                        <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
-                    </div>
-
-                    <div class="award-row">
-                        <label class="checkbox-container">
-                            <input type="checkbox"> Best Online Campaign
-                        </label>
-                        <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
-                    </div>
-
-                    <div class="btn-wrapper">
-                        <button type="submit" class="success-banner">
-                            <span>✓</span> Submission Successful
-                        </button>
-                    </div>
-                </form>
+            <div class="header-right">
+                <div class="phone-box">
+                    <span class="call-label"><i class="fa-solid fa-phone-volume"></i> Call Our Offices Now!</span>
+                    <a href="tel:5404336906" class="phone-number">540.433.6906</a>
+                    <span class="availability">24/7 Free Confidential Consultation</span>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <script>
-        let touchstartX = 0;
-        let touchendX = 0;
-        const touchArea = document.getElementById('touchArea');
+    <nav class="main-navigation">
+        <div class="container nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> HOME</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">BIOGRAPHY</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">BLOG</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">AREAS WE SERVE</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">LIBRARY</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">CASE RESULTS</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        touchArea.addEventListener('touchstart', e => {
-            touchstartX = e.changedTouches[0].screenX;
-        }, false);
+    <main class="container">
+        <div class="submission-box">
+            <i class="fa-circle-check fa-regular submission-icon"></i>
+            <h2 class="submission-title">Case Details Received</h2>
+            <p class="submission-text">
+                Thank you for reaching out to Keefer Law Firm PLC. We have received your message and will review your legal details promptly. One of our defense attorneys will contact you shortly.
+            </p>
+            <a href="index.html" class="btn btn-gold">
+                <i class="fa-solid fa-arrow-left"></i> Return to Main Page
+            </a>
+        </div>
+    </main>
 
-        touchArea.addEventListener('touchend', e => {
-            touchendX = e.changedTouches[0].screenX;
-            if (touchendX - touchstartX > 40) {
-                window.location.href = 'redcard.html';
-            }
-        }, false);
-    </script>
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-col">
+                <h4>Keefer Law Firm PLC</h4>
+                <p>Experienced Legal Representation in Harrisonburg, Rockingham County, and Virginia State Courts.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">DUI Defense</a></li>
+                    <li><a href="#">Reckless Driving</a></li>
+                    <li><a href="#">Case Results</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Harrisonburg, VA 22801</p>
+                <p><i class="fa-solid fa-phone"></i> 540.433.6906</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Keefer Law Firm PLC. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
