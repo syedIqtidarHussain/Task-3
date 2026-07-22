@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Card Submission Form</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="screen-container angled-footer-cut" id="swipeArea">
+    <div class="screen-container angled-footer-cut" id="touchArea">
         <div class="swipe-hint">👉 Swipe Right to go back to Dashboard</div>
 
-        <!-- Header -->
         <div class="top-header">
-            <img src="./images/top-logo.png" alt="Red Card Logo" class="logo-img">
+            <img src="images/top-logo.png" alt="Red Card Logo" class="logo-img">
         </div>
 
-        <!-- Submission Content -->
         <div class="submission-layout">
             <div class="sub-left-column">
                 <h1>Submission</h1>
@@ -78,31 +76,31 @@
                         <textarea class="award-textbox" placeholder="Description & Results (max. 150 words)"></textarea>
                     </div>
 
-                    <div class="success-banner">
-                        <span>✓</span> Submission Successful
+                    <div class="btn-wrapper">
+                        <button type="submit" class="success-banner">
+                            <span>✓</span> Submission Successful
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Touch Swipe Script -->
     <script>
         let touchstartX = 0;
         let touchendX = 0;
+        const touchArea = document.getElementById('touchArea');
 
-        const swipeArea = document.getElementById('swipeArea');
-
-        swipeArea.addEventListener('touchstart', e => {
+        touchArea.addEventListener('touchstart', e => {
             touchstartX = e.changedTouches[0].screenX;
-        });
+        }, false);
 
-        swipeArea.addEventListener('touchend', e => {
+        touchArea.addEventListener('touchend', e => {
             touchendX = e.changedTouches[0].screenX;
-            if (touchendX - touchstartX > 50) {
+            if (touchendX - touchstartX > 40) {
                 window.location.href = 'redcard.html';
             }
-        });
+        }, false);
     </script>
 </body>
 </html>
