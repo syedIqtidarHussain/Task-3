@@ -3,30 +3,31 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100vh;
   overflow-x: hidden;
   background-color: #ffffff;
   color: #333333;
   font-family: Arial, Helvetica, sans-serif;
-  /* Whole page flex structure to push footer to absolute bottom */
-  display: flex;
-  flex-direction: column;
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* Color Variables */
 :root {
   --maroon-bg: #8B262A;
   --text-white: #ffffff;
   --border-light: rgba(255, 255, 255, 0.4);
 }
 
-/* =======================================
-   INDEX PAGE LAYOUT
-   ======================================= */
+/* Common Logo Style */
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: contain;
+  display: block;
+}
 
 /* Top Hero Section */
 .hero-section {
@@ -46,14 +47,6 @@ html, body {
     calc(100% - 100px) 100%, 
     0 100%
   ) !important;
-}
-
-.logo {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  object-fit: contain;
 }
 
 .hero-title {
@@ -77,11 +70,10 @@ html, body {
   opacity: 0.88;
 }
 
-/* Main Content Grid - Grows to take space */
+/* Main Content Container */
 .content-container {
   padding: 40px 8%;
   width: 100%;
-  flex: 1; /* Pushes the footer down */
 }
 
 .category-row {
@@ -131,19 +123,17 @@ html, body {
   color: #666666;
 }
 
-/* Footer Banner - Fixed to Bottom with Extra Height */
+/* Footer Banner Section */
 .footer-banner {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 50px 8% 80px 8%; /* Padding increase ki hai bottom se space fill karne */
+  padding: 50px 8% 80px 8%;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  margin-bottom: 0 !important; /* Forces 0 gap at bottom */
-  margin-top: auto; /* Attaches footer to the end */
   clip-path: polygon(
     0 0, 
     100% 0, 
@@ -177,4 +167,144 @@ html, body {
   text-transform: uppercase;
   border-radius: 2px;
   letter-spacing: 0.5px;
+}
+
+/* =======================================
+   SUBMISSION FORM STYLES
+   ======================================= */
+.submission-body {
+  background-color: #ffffff;
+}
+
+.form-header {
+  padding: 20px 8%;
+  background-color: #ffffff;
+}
+
+.form-page-container {
+  background-color: var(--maroon-bg);
+  color: var(--text-white);
+  padding: 40px 8% 60px 8%;
+  width: 100vw;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 70px), 
+    calc(100% - 100px) 100%, 
+    0 100%
+  ) !important;
+}
+
+.form-left-info {
+  flex: 1;
+}
+
+.form-main-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.form-info-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  max-width: 360px;
+  margin-bottom: 30px;
+}
+
+.form-deadline-text {
+  font-size: 1rem;
+  font-weight: bold;
+  max-width: 320px;
+}
+
+.form-right-container {
+  flex: 1.2;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: #ffffff;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.awards-section-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.awards-instruction {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.award-item {
+  margin-bottom: 12px;
+}
+
+.award-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 55px;
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: #ffffff;
+  padding: 8px;
+  font-size: 0.78rem;
+  resize: none;
+  outline: none;
+}
+
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 2px;
+  text-align: center;
 }
