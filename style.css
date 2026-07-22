@@ -2,143 +2,153 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', 'Helvetica Neue', sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     color: #333;
 }
 
-/* Header & Banner styling */
+/* --- TOP RED BANNER (Slanted Corner Cut) --- */
 .red-banner {
-    background-color: #802327;
+    background-color: #7d1d23;
     color: #ffffff;
-    padding: 40px 10%;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    padding: 35px 8% 70px 8%;
+    /* Pointed diagonal cut on the bottom right */
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 82% 100%, 0 100%);
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    background-color: #fff;
 }
 
 .title {
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 900;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
 }
 
 .subtitle {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .description {
-    font-size: 13px;
-    line-height: 1.6;
-    max-width: 600px;
-    color: #e0e0e0;
-    margin-bottom: 15px;
+    font-size: 11px;
+    line-height: 1.5;
+    max-width: 540px;
+    color: #e0d0d0;
+    margin-bottom: 12px;
 }
 
 .btn-submission {
     display: inline-block;
     background-color: #ffffff;
-    color: #802327;
-    padding: 10px 20px;
+    color: #000000;
+    padding: 8px 16px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
     text-decoration: none;
-    margin-top: 15px;
+    margin-top: 10px;
     letter-spacing: 0.5px;
+    border: none;
 }
 
-/* Awards Sections Grid */
+/* --- MAIN AWARDS GRID SECTION --- */
 .awards-container {
-    padding: 40px 10%;
+    padding: 30px 8%;
+    background-color: #ffffff;
+}
+
+.category-block {
+    margin-bottom: 30px;
 }
 
 .category-title {
     color: #111;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 900;
-    letter-spacing: 1px;
-    margin: 25px 0 15px 0;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
 }
 
 .category-title::before {
-    content: "▶ ";
-    color: #802327;
-    font-size: 10px;
+    content: "▶";
+    color: #7d1d23;
+    font-size: 8px;
     margin-right: 6px;
 }
 
 .clubs-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 750px;
 }
 
 .club-card {
     text-align: center;
+    width: 80px;
 }
 
 .club-card img {
-    height: 60px;
+    height: 50px;
     width: auto;
     object-fit: contain;
-    margin: 0 auto 8px auto;
+    margin-bottom: 6px;
 }
 
 .club-card p {
-    font-size: 11px;
-    color: #666;
-    margin: 0;
+    font-size: 9px;
+    color: #777;
+    margin: 1px 0;
+    line-height: 1.1;
 }
 
 .club-card p.bold {
     font-weight: bold;
-    color: #333;
+    color: #222;
 }
 
-/* Bottom Announcement Banner */
+/* --- BOTTOM RED FOOTER (Top-Right Slanted Cut) --- */
 .bottom-banner {
-    background-color: #802327;
+    background-color: #7d1d23;
     color: white;
-    padding: 40px 10%;
-    margin-top: 40px;
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    padding: 40px 8% 50px 8%;
+    /* Diagonal angle at top right */
+    clip-path: polygon(0 0, 82% 0, 100% 25%, 100% 100%, 0 100%);
 }
 
 .bottom-banner h2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 900;
-    max-width: 500px;
-    line-height: 1.3;
+    max-width: 480px;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
 }
 
-/* Submission Page Layout */
+/* --- SUBMISSION PAGE FORM STYLES --- */
 .submission-page {
-    background-color: #802327;
+    background-color: #7d1d23;
     color: white;
     min-height: 100vh;
-    padding: 40px 10%;
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    padding: 40px 8%;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 }
 
 .submission-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 40px;
     margin-top: 20px;
 }
 
@@ -146,29 +156,32 @@ body {
     margin-bottom: 12px;
 }
 
-.form-group-input input, .form-group-input textarea {
+.form-group-input input, 
+.form-group-input textarea {
     width: 100%;
     padding: 10px;
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    font-size: 12px;
+    font-size: 11px;
+    outline: none;
 }
 
-.form-group-input input::placeholder, .form-group-input textarea::placeholder {
+.form-group-input input::placeholder, 
+.form-group-input textarea::placeholder {
     color: #ccc;
 }
 
 .checkbox-section {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .checkbox-item {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .checkbox-label {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -179,10 +192,11 @@ body {
 .btn-submit-app {
     width: 100%;
     background: white;
-    color: #802327;
+    color: #7d1d23;
     border: none;
     padding: 12px;
     font-weight: bold;
+    font-size: 12px;
     cursor: pointer;
     margin-top: 15px;
 }
