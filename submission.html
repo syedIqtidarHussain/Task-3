@@ -26,9 +26,9 @@
       --border-light: rgba(255, 255, 255, 0.4);
     }
 
-    /* Reference Design ke mutabiq Logo Style (Bara size aur proper spacing) */
+    /* Logo bilkul top-left corner par */
     .form-header {
-      padding: 20px 8%;
+      padding: 10px 0 10px 20px;
       background-color: #ffffff;
       display: flex;
       justify-content: flex-start;
@@ -60,9 +60,10 @@
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70px), calc(100% - 100px) 100%, 0 100%) !important;
     }
 
+    /* Submission text aur baaki content ko mazeed neechay shift karne ke liye margin-top barhaya gaya hai */
     .form-left-info {
       flex: 1;
-      margin-top: 10px;
+      margin-top: 40px;
     }
 
     .form-main-heading {
@@ -181,7 +182,7 @@
 </head>
 <body class="submission-body">
 
-  <!-- Top White Header with Reference Logo Style -->
+  <!-- Top White Header -->
   <header class="form-header">
     <img src="images/logo.png" alt="Logo" class="logo">
   </header>
