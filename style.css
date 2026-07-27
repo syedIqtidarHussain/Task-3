@@ -19,34 +19,35 @@ html, body {
   --border-light: rgba(255, 255, 255, 0.4);
 }
 
-/* Common Logo Style - Center Aligned */
+/* Header & Logo - Left Aligned */
 .logo-container, .form-header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 20px 8%;
+  background-color: #ffffff;
 }
 
 .logo {
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  margin: 0 auto;
   object-fit: contain;
   display: block;
 }
 
-/* Top Hero Section */
+/* Hero Section - Left Aligned */
 .hero-section {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 50px 8% 65px 8%;
+  padding: 60px 8% 80px 8%;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  text-align: center; /* Text Centered */
+  text-align: left;
   clip-path: polygon(
     0 0, 
     100% 0, 
@@ -61,23 +62,25 @@ html, body {
 }
 
 .hero-title {
-  font-size: 4rem; /* Font Size Increased Even More */
+  font-size: 4rem;
   font-weight: 800;
   letter-spacing: 1px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .hero-subtitle {
-  font-size: 1.6rem; /* Font Size Increased Even More */
+  font-size: 1.8rem;
+  font-weight: bold;
   opacity: 0.95;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .hero-description {
-  font-size: 1.25rem; /* Font Size Increased Even More */
+  font-size: 1.25rem;
   line-height: 1.6;
   max-width: 900px;
-  margin: 0 auto 18px auto; /* Centered layout */
+  margin-bottom: 20px;
   opacity: 0.92;
 }
 
@@ -88,33 +91,32 @@ html, body {
 }
 
 .category-row {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
+/* RED TRIANGLE BULLET - Exact match with image */
 .category-title {
-  font-size: 1.4rem; /* Font Size Increased Even More */
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centered */
   gap: 12px;
-  color: #222222;
+  color: #000000;
 }
 
-/* Bullets Size and Style Changed (■ symbol) */
-.bullet-marker {
+.category-title::before {
+  content: "";
   display: inline-block;
-  width: 12px; /* Set a specific width/height */
-  height: 12px;
-  background-color: transparent; /* Assuming transparent for now */
-  /* Or if it's a solid square, you'd use background-color */
-  /* If using a character: */
-  font-size: 1rem; /* Adjust character size */
-  margin-right: 8px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 18px solid var(--maroon-bg); /* Custom Red Triangle Bullet */
 }
 
+/* Cards Alignment */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -126,35 +128,37 @@ html, body {
 }
 
 .card img {
-  width: 70px; /* Logo Size Increased slightly */
+  width: 70px;
   height: 70px;
   object-fit: contain;
   margin-bottom: 10px;
 }
 
 .card-title {
-  font-size: 1.1rem; /* Font Size Increased Even More */
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #333333;
+  color: #8B262A;
   margin-bottom: 4px;
 }
 
 .card-desc {
-  font-size: 1rem; /* Font Size Increased Even More */
-  color: #666666;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #8B262A;
 }
 
 /* Footer Banner Section */
 .footer-banner {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 50px 8% 80px 8%;
+  padding: 60px 8% 90px 8%;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  text-align: left;
   clip-path: polygon(
     0 0, 
     100% 0, 
@@ -162,33 +166,15 @@ html, body {
     calc(100% - 100px) 100%, 
     0 100%
   ) !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centered */
-  text-align: center; /* Centered */
-  gap: 20px;
 }
 
 .footer-text {
-  font-size: 1.5rem; /* Font Size Increased Even More */
-  font-weight: bold;
+  font-size: 2.2rem;
+  font-weight: 800;
   text-transform: uppercase;
-  line-height: 1.4;
+  line-height: 1.3;
   margin: 0;
-  max-width: 850px;
-}
-
-.btn-goto-submission {
-  display: inline-block;
-  background-color: #ffffff;
-  color: #000000;
-  padding: 14px 26px; /* Padding Increased */
-  font-size: 1.1rem; /* Font Size Increased Even More */
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 2px;
-  letter-spacing: 0.5px;
+  max-width: 900px;
 }
 
 /* =======================================
@@ -198,16 +184,10 @@ html, body {
   background-color: #ffffff;
 }
 
-.form-header {
-  padding: 25px 8%;
-  background-color: #ffffff;
-  justify-content: center; /* Centered */
-}
-
 .form-page-container {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 50px 8% 70px 8%;
+  padding: 60px 8% 80px 8%;
   width: 100vw;
   min-height: calc(100vh - 90px);
   position: relative;
@@ -217,8 +197,8 @@ html, body {
   margin-right: -50vw;
   display: flex;
   justify-content: space-between;
-  gap: 50px;
-  text-align: left; /* *Crucially* Left Aligned Left Section */
+  gap: 60px;
+  text-align: left;
   clip-path: polygon(
     0 0, 
     100% 0, 
@@ -228,40 +208,30 @@ html, body {
   ) !important;
 }
 
-/* Specific class to left-align right section inputs and textareas */
-.left-align-inputs .form-right-container .form-input,
-.left-align-inputs .form-right-container .form-textarea,
-.left-align-inputs .form-right-container .award-checkbox-label {
-  text-align: left;
-  justify-content: flex-start; /* For flex-based label */
-}
-
 .form-left-info {
   flex: 1;
 }
 
 .form-main-heading {
-  font-size: 4.5rem; /* Font Size Increased Even More */
+  font-size: 4.8rem;
   font-weight: 800;
   margin-top: 0;
-  margin-bottom: 22px;
-  text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .form-info-text {
-  font-size: 1.25rem; /* Font Size Increased Even More */
+  font-size: 1.2rem;
   line-height: 1.6;
   opacity: 0.95;
-  max-width: 400px;
-  margin: 0 0 30px 0; /* Aligned Left */
+  max-width: 450px;
+  margin-bottom: 35px;
 }
 
 .form-deadline-text {
-  font-size: 1.45rem; /* Font Size Increased Even More */
+  font-size: 1.5rem;
   font-weight: bold;
-  max-width: 350px;
+  max-width: 400px;
   line-height: 1.4;
-  margin: 0; /* Aligned Left */
 }
 
 .form-right-container {
@@ -269,110 +239,82 @@ html, body {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .form-input {
   width: 100%;
-  padding: 12px 14px;
+  padding: 14px 16px;
   background: transparent;
   border: 1px solid var(--border-light);
   color: #ffffff;
-  font-size: 1.15rem; /* Font Size Increased Even More */
+  font-size: 1.1rem;
   outline: none;
+  text-align: left;
 }
 
 .form-input::placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .awards-section-title {
-  font-size: 1.5rem; /* Font Size Increased Even More */
+  font-size: 1.6rem;
   font-weight: bold;
-  margin-top: 25px;
+  margin-top: 30px;
   margin-bottom: 6px;
   text-align: left;
 }
 
 .awards-instruction {
-  font-size: 1.05rem; /* Font Size Increased Even More */
+  font-size: 0.95rem;
   opacity: 0.85;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   text-align: left;
 }
 
 .award-item {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .award-checkbox-label {
   display: flex;
   align-items: center;
-  /* alignment handled by .left-align-inputs class */
+  justify-content: flex-start;
   gap: 10px;
-  font-size: 1.15rem; /* Font Size Increased Even More */
+  font-size: 1.15rem;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   cursor: pointer;
-}
-
-/* Bullet icon alignment fix */
-.bullet-marker {
-    margin-right: 10px;
+  text-align: left;
 }
 
 .form-textarea {
   width: 100%;
-  height: 80px; /* Height increased */
+  height: 75px;
   background: transparent;
   border: 1px solid var(--border-light);
   color: #ffffff;
-  padding: 12px; /* Padding increased */
-  font-size: 1.1rem; /* Font Size Increased Even More */
+  padding: 12px;
+  font-size: 1.05rem;
   resize: none;
   outline: none;
+  text-align: left;
 }
 
 .form-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75);
 }
 
-/* Status Icons (square and check) - Minimal CSS example, replace with actual icon styles if needed */
-.status-icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-left: 10px; /* Adjust spacing */
-}
-/* Placeholder solid square style for checked, update with actual tick graphic */
-.icon-checked {
-    background-color: white; 
-}
-
-
-/* Submit Button in Checkbox Style */
-.checkbox-style-btn {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Align left */
+.btn-submit {
   width: 100%;
   background-color: #ffffff;
   color: #000000;
   border: none;
-  padding: 14px 18px; /* Padding Increased */
-  font-size: 1.25rem; /* Font Size Increased Even More */
+  padding: 16px;
+  font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 25px;
   border-radius: 2px;
-  text-align: left;
-  gap: 12px;
-}
-
-/* Overwrite submit button hover if needed */
-.btn-submit:hover {
-    opacity: 0.9;
+  text-align: center;
 }
