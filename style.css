@@ -299,5 +299,24 @@ body {
 
   .form-right-container {
     flex: 1.2;
-  }
+  
+}
+/* Next Page Button Styling (Bottom Left) */
+.next-page-container {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.next-page-btn {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  transition: opacity 0.2s ease;
+}
+
+.next-page-btn:hover {
+  opacity: 0.8;
 }
