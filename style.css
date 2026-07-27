@@ -1,118 +1,109 @@
-/* Base Reset */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #ffffff;
-  color: #333333;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/* =======================================
+   GENERAL RESET & BASE STYLES
+   ======================================= */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
   --maroon-bg: #8B262A;
   --text-white: #ffffff;
+  --text-black: #000000;
   --border-light: rgba(255, 255, 255, 0.4);
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* =======================================
-   HEADER LOGO FIX (Top-Left Alignment)
+   HEADER & LOGO (Top-Left Fixed Size)
    ======================================= */
-.logo-container, .form-header {
+.top-header {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #ffffff;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 15px 5%; /* Aligned further to left end */
-  background-color: transparent;
 }
 
-/* Hero Section Logo Override (For Red Card Page) */
-.hero-section .logo {
-  width: 50px !important;  /* Logo size reduced to match original */
-  height: 50px !important;
-  max-width: 50px !important;
-  max-height: 50px !important;
-  border-radius: 50%;
+.site-logo {
+  width: 42px !important;
+  height: 42px !important;
+  max-width: 42px !important;
+  max-height: 42px !important;
   object-fit: contain;
   display: block;
-  margin: 0 0 20px 0 !important; /* Top Left position inside container */
-}
-
-/* Submission Page Header Logo */
-.form-header .logo {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  object-fit: contain;
-  display: block;
-  margin: 0;
 }
 
 /* =======================================
-   HERO SECTION (Red Card Page)
+   RED CARD PAGE - HERO BANNER
    ======================================= */
 .hero-section {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 30px 5% 60px 5%;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  padding: 35px 20px 80px 20px;
+  width: 100%;
   text-align: left;
-  /* Slanted Edge Cut - Exact Angle Match */
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%) !important;
+  /* Actual Slanted Corner Cut Edge at Bottom Right */
+  clip-path: polygon(0 0, 100% 0, 100% 82%, 78% 100%, 0 100%);
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--text-white);
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
+/* Subtitle in BLACK as per actual design */
 .hero-subtitle {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-black) !important;
+  margin-bottom: 22px;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-white);
+  margin-bottom: 14px;
   opacity: 0.95;
-  margin-bottom: 25px;
-}
-
-.hero-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
   max-width: 850px;
-  margin-bottom: 15px;
-  opacity: 0.92;
 }
 
-/* Main Content Container */
+/* =======================================
+   MAIN CONTENT & CATEGORIES
+   ======================================= */
 .content-container {
-  padding: 50px 5%;
+  padding: 40px 20px;
   width: 100%;
 }
 
 .category-row {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
-/* Red Triangle Bullets */
+/* Triangular Bullet */
 .category-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  color: var(--text-black);
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: #000000;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .category-title::before {
@@ -120,15 +111,15 @@ html, body {
   display: inline-block;
   width: 0;
   height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 18px solid var(--maroon-bg);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 14px solid var(--maroon-bg);
 }
 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  gap: 15px;
 }
 
 .card {
@@ -136,127 +127,86 @@ html, body {
 }
 
 .card img {
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 55px;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
-.card-title {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #8B262A;
-  margin-bottom: 4px;
+.card-title, .card-desc {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--maroon-bg);
+  line-height: 1.2;
 }
 
-.card-desc {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #8B262A;
-}
-
-/* Footer Banner Section */
+/* =======================================
+   FOOTER BANNER
+   ======================================= */
 .footer-banner {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 50px 5% 80px 5%;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  padding: 40px 20px 80px 20px;
   text-align: left;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 80% 100%, 0 100%) !important;
+  /* Slanted Edge Cut */
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 78% 100%, 0 100%);
 }
 
 .footer-text {
-  font-size: 2rem;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 900;
   line-height: 1.3;
-  margin: 0;
+  text-transform: uppercase;
   max-width: 850px;
 }
 
 /* =======================================
-   SUBMISSION FORM STYLES
+   SUBMISSION PAGE STYLES
    ======================================= */
-.submission-body {
-  background-color: #ffffff;
-}
-
-.form-header {
-  padding: 15px 5%;
-  background-color: #ffffff;
-  justify-content: flex-start;
-}
-
 .form-page-container {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 50px 5% 80px 5%;
-  width: 100vw;
-  min-height: calc(100vh - 90px);
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  padding: 40px 20px 80px 20px;
+  width: 100%;
+  min-height: calc(100vh - 65px);
   display: flex;
-  justify-content: space-between;
-  gap: 50px;
+  flex-direction: column;
+  gap: 30px;
   text-align: left;
-  /* Slanted Edge Cut - Exact Angle Match */
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0 100%) !important;
-}
-
-.form-left-info {
-  flex: 1;
+  /* Slanted Edge Cut at Bottom Right */
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 78% 100%, 0 100%);
 }
 
 .form-main-heading {
-  font-size: 4.5rem;
-  font-weight: 800;
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  color: var(--text-white);
 }
 
-.form-info-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #000000;
-  font-weight: 600;
-  max-width: 420px;
-  margin-bottom: 30px;
-}
-
+/* Text under Submission in BLACK */
+.form-info-text,
 .form-deadline-text {
-  font-size: 1.35rem;
+  color: var(--text-black) !important;
   font-weight: 800;
-  color: #000000;
-  max-width: 380px;
-  line-height: 1.4;
-}
-
-.form-right-container {
-  flex: 1.2;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 450px;
 }
 
 .form-group {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .form-input {
   width: 100%;
-  padding: 14px 16px;
+  padding: 12px 14px;
   background: transparent;
   border: 1px solid var(--border-light);
-  color: #ffffff;
-  font-size: 1.1rem;
+  color: var(--text-white);
+  font-size: 1rem;
   outline: none;
-  text-align: left;
 }
 
 .form-input::placeholder {
@@ -264,47 +214,43 @@ html, body {
 }
 
 .awards-section-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 25px;
-  margin-bottom: 6px;
-  text-align: left;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-top: 20px;
+  margin-bottom: 4px;
+  color: var(--text-black);
 }
 
 .awards-instruction {
-  font-size: 0.95rem;
-  opacity: 0.85;
-  margin-bottom: 20px;
-  text-align: left;
+  font-size: 0.85rem;
+  color: var(--text-black);
+  margin-bottom: 18px;
 }
 
 .award-item {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .award-checkbox-label {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  cursor: pointer;
-  text-align: left;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--text-white);
 }
 
 .form-textarea {
   width: 100%;
-  height: 75px;
+  height: 65px;
   background: transparent;
   border: 1px solid var(--border-light);
-  color: #ffffff;
-  padding: 12px;
-  font-size: 1rem;
+  color: var(--text-white);
+  padding: 10px;
+  font-size: 0.9rem;
   resize: none;
   outline: none;
-  text-align: left;
 }
 
 .form-textarea::placeholder {
@@ -313,14 +259,45 @@ html, body {
 
 .btn-submit {
   width: 100%;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--text-white);
+  color: var(--text-black);
   border: none;
-  padding: 16px;
-  font-size: 1.25rem;
-  font-weight: bold;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 900;
   cursor: pointer;
-  margin-top: 25px;
-  border-radius: 2px;
+  margin-top: 20px;
   text-align: center;
+}
+
+/* =======================================
+   DESKTOP RESPONSIVE LAYOUT
+   ======================================= */
+@media (min-width: 768px) {
+  .hero-section, .footer-banner, .form-page-container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .content-container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .top-header {
+    padding-left: 8%;
+  }
+
+  .form-page-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-left-info {
+    flex: 1;
+  }
+
+  .form-right-container {
+    flex: 1.2;
+  }
 }
