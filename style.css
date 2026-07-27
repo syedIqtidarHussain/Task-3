@@ -19,28 +19,29 @@ html, body {
   --border-light: rgba(255, 255, 255, 0.4);
 }
 
-/* Header & Logo - Left Aligned */
+/* Common Header / Logo - Top Left End */
 .logo-container, .form-header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px 8%;
-  background-color: #ffffff;
+  padding: 20px 0 10px 0;
+  background-color: transparent;
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 45px; /* Exact small size like screenshot */
+  height: 45px;
   border-radius: 50%;
   object-fit: contain;
   display: block;
+  margin: 0;
 }
 
-/* Hero Section - Left Aligned */
+/* Top Hero Section - Bottom Right Diagonal Edge */
 .hero-section {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 60px 8% 80px 8%;
+  padding: 30px 8% 70px 8%;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -48,40 +49,35 @@ html, body {
   margin-left: -50vw;
   margin-right: -50vw;
   text-align: left;
-  clip-path: polygon(
-    0 0, 
-    100% 0, 
-    100% calc(100% - 70px), 
-    calc(100% - 100px) 100%, 
-    0 100%
-  ) !important;
+  /* Exact Diagonal Corner Cut at Bottom-Right */
+  clip-path: polygon(0 0, 100% 0, 100% 82%, 82% 100%, 0 100%) !important;
 }
 
 .hero-section .logo {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: 800;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-transform: uppercase;
 }
 
 .hero-subtitle {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
   opacity: 0.95;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .hero-description {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.6;
-  max-width: 900px;
-  margin-bottom: 20px;
-  opacity: 0.92;
+  max-width: 850px;
+  margin-bottom: 15px;
+  opacity: 0.95;
 }
 
 /* Main Content Container */
@@ -94,7 +90,7 @@ html, body {
   margin-bottom: 45px;
 }
 
-/* RED TRIANGLE BULLET - Exact match with image */
+/* Red Triangle Bullet */
 .category-title {
   font-size: 1.8rem;
   font-weight: 800;
@@ -113,10 +109,9 @@ html, body {
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 18px solid var(--maroon-bg); /* Custom Red Triangle Bullet */
+  border-left: 18px solid var(--maroon-bg);
 }
 
-/* Cards Alignment */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -128,30 +123,30 @@ html, body {
 }
 
 .card img {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   object-fit: contain;
   margin-bottom: 10px;
 }
 
 .card-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #8B262A;
   margin-bottom: 4px;
 }
 
 .card-desc {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: bold;
   color: #8B262A;
 }
 
-/* Footer Banner Section */
+/* Footer Banner Section - Diagonal Edge Matches Design */
 .footer-banner {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 60px 8% 90px 8%;
+  padding: 50px 8% 80px 8%;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -159,22 +154,16 @@ html, body {
   margin-left: -50vw;
   margin-right: -50vw;
   text-align: left;
-  clip-path: polygon(
-    0 0, 
-    100% 0, 
-    100% calc(100% - 70px), 
-    calc(100% - 100px) 100%, 
-    0 100%
-  ) !important;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 82% 100%, 0 100%) !important;
 }
 
 .footer-text {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.3;
   margin: 0;
-  max-width: 900px;
+  max-width: 850px;
 }
 
 /* =======================================
@@ -184,10 +173,16 @@ html, body {
   background-color: #ffffff;
 }
 
+.form-header {
+  padding: 20px 8%;
+  background-color: #ffffff;
+  justify-content: flex-start;
+}
+
 .form-page-container {
   background-color: var(--maroon-bg);
   color: var(--text-white);
-  padding: 60px 8% 80px 8%;
+  padding: 50px 8% 80px 8%;
   width: 100vw;
   min-height: calc(100vh - 90px);
   position: relative;
@@ -199,13 +194,8 @@ html, body {
   justify-content: space-between;
   gap: 60px;
   text-align: left;
-  clip-path: polygon(
-    0 0, 
-    100% 0, 
-    100% calc(100% - 70px), 
-    calc(100% - 100px) 100%, 
-    0 100%
-  ) !important;
+  /* Exact Bottom-Right Corner Slant Cut */
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0 100%) !important;
 }
 
 .form-left-info {
@@ -213,24 +203,28 @@ html, body {
 }
 
 .form-main-heading {
-  font-size: 4.8rem;
+  font-size: 4.5rem;
   font-weight: 800;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
+/* SUBMISSION TEXT COLOR CHANGED TO BLACK */
 .form-info-text {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.6;
-  opacity: 0.95;
-  max-width: 450px;
-  margin-bottom: 35px;
+  color: #000000; /* Black text color */
+  font-weight: 600;
+  max-width: 420px;
+  margin-bottom: 30px;
 }
 
 .form-deadline-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  max-width: 400px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #000000; /* Black text color */
+  max-width: 380px;
   line-height: 1.4;
 }
 
@@ -258,9 +252,9 @@ html, body {
 }
 
 .awards-section-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 25px;
   margin-bottom: 6px;
   text-align: left;
 }
@@ -281,7 +275,7 @@ html, body {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 10px;
   cursor: pointer;
@@ -295,7 +289,7 @@ html, body {
   border: 1px solid var(--border-light);
   color: #ffffff;
   padding: 12px;
-  font-size: 1.05rem;
+  font-size: 1rem;
   resize: none;
   outline: none;
   text-align: left;
@@ -311,7 +305,7 @@ html, body {
   color: #000000;
   border: none;
   padding: 16px;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: bold;
   cursor: pointer;
   margin-top: 25px;
