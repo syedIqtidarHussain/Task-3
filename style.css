@@ -61,20 +61,20 @@ html, body {
 }
 
 .hero-title {
-  font-size: 3.5rem; /* Font Size Increased */
+  font-size: 4rem; /* Font Size Increased Even More */
   font-weight: 800;
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
 
 .hero-subtitle {
-  font-size: 1.4rem; /* Font Size Increased */
+  font-size: 1.6rem; /* Font Size Increased Even More */
   opacity: 0.95;
   margin-bottom: 25px;
 }
 
 .hero-description {
-  font-size: 1.1rem; /* Font Size Increased */
+  font-size: 1.25rem; /* Font Size Increased Even More */
   line-height: 1.6;
   max-width: 900px;
   margin: 0 auto 18px auto; /* Centered layout */
@@ -92,21 +92,27 @@ html, body {
 }
 
 .category-title {
-  font-size: 1.25rem; /* Font Size Increased */
+  font-size: 1.4rem; /* Font Size Increased Even More */
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center; /* Centered */
-  gap: 10px;
+  gap: 12px;
   color: #222222;
 }
 
-/* Bullets Size Increased */
-.category-title::before {
-  content: "►";
-  font-size: 0.9rem; /* Bullets Size Increased */
+/* Bullets Size and Style Changed (■ symbol) */
+.bullet-marker {
+  display: inline-block;
+  width: 12px; /* Set a specific width/height */
+  height: 12px;
+  background-color: transparent; /* Assuming transparent for now */
+  /* Or if it's a solid square, you'd use background-color */
+  /* If using a character: */
+  font-size: 1rem; /* Adjust character size */
+  margin-right: 8px;
 }
 
 .cards-grid {
@@ -120,21 +126,21 @@ html, body {
 }
 
 .card img {
-  width: 60px;
-  height: 60px;
+  width: 70px; /* Logo Size Increased slightly */
+  height: 70px;
   object-fit: contain;
   margin-bottom: 10px;
 }
 
 .card-title {
-  font-size: 1rem; /* Font Size Increased */
+  font-size: 1.1rem; /* Font Size Increased Even More */
   font-weight: bold;
   color: #333333;
   margin-bottom: 4px;
 }
 
 .card-desc {
-  font-size: 0.9rem; /* Font Size Increased */
+  font-size: 1rem; /* Font Size Increased Even More */
   color: #666666;
 }
 
@@ -164,7 +170,7 @@ html, body {
 }
 
 .footer-text {
-  font-size: 1.35rem; /* Font Size Increased */
+  font-size: 1.5rem; /* Font Size Increased Even More */
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.4;
@@ -176,8 +182,8 @@ html, body {
   display: inline-block;
   background-color: #ffffff;
   color: #000000;
-  padding: 12px 22px;
-  font-size: 1rem; /* Font Size Increased */
+  padding: 14px 26px; /* Padding Increased */
+  font-size: 1.1rem; /* Font Size Increased Even More */
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -212,7 +218,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  text-align: center; /* Centered */
+  text-align: left; /* *Crucially* Left Aligned Left Section */
   clip-path: polygon(
     0 0, 
     100% 0, 
@@ -222,12 +228,20 @@ html, body {
   ) !important;
 }
 
+/* Specific class to left-align right section inputs and textareas */
+.left-align-inputs .form-right-container .form-input,
+.left-align-inputs .form-right-container .form-textarea,
+.left-align-inputs .form-right-container .award-checkbox-label {
+  text-align: left;
+  justify-content: flex-start; /* For flex-based label */
+}
+
 .form-left-info {
   flex: 1;
 }
 
 .form-main-heading {
-  font-size: 4rem; /* Font Size Increased */
+  font-size: 4.5rem; /* Font Size Increased Even More */
   font-weight: 800;
   margin-top: 0;
   margin-bottom: 22px;
@@ -235,19 +249,19 @@ html, body {
 }
 
 .form-info-text {
-  font-size: 1.15rem; /* Font Size Increased */
+  font-size: 1.25rem; /* Font Size Increased Even More */
   line-height: 1.6;
   opacity: 0.95;
   max-width: 400px;
-  margin: 0 auto 30px auto; /* Centered layout */
+  margin: 0 0 30px 0; /* Aligned Left */
 }
 
 .form-deadline-text {
-  font-size: 1.35rem; /* Font Size Increased */
+  font-size: 1.45rem; /* Font Size Increased Even More */
   font-weight: bold;
   max-width: 350px;
   line-height: 1.4;
-  margin: 0 auto;
+  margin: 0; /* Aligned Left */
 }
 
 .form-right-container {
@@ -264,9 +278,8 @@ html, body {
   background: transparent;
   border: 1px solid var(--border-light);
   color: #ffffff;
-  font-size: 1.05rem; /* Font Size Increased */
+  font-size: 1.15rem; /* Font Size Increased Even More */
   outline: none;
-  text-align: center; /* Centered */
 }
 
 .form-input::placeholder {
@@ -274,16 +287,18 @@ html, body {
 }
 
 .awards-section-title {
-  font-size: 1.35rem; /* Font Size Increased */
+  font-size: 1.5rem; /* Font Size Increased Even More */
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 6px;
+  text-align: left;
 }
 
 .awards-instruction {
-  font-size: 0.95rem; /* Font Size Increased */
+  font-size: 1.05rem; /* Font Size Increased Even More */
   opacity: 0.85;
   margin-bottom: 18px;
+  text-align: left;
 }
 
 .award-item {
@@ -293,41 +308,71 @@ html, body {
 .award-checkbox-label {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centered */
+  /* alignment handled by .left-align-inputs class */
   gap: 10px;
-  font-size: 1.05rem; /* Font Size Increased */
+  font-size: 1.15rem; /* Font Size Increased Even More */
   font-weight: bold;
   margin-bottom: 8px;
   cursor: pointer;
 }
 
+/* Bullet icon alignment fix */
+.bullet-marker {
+    margin-right: 10px;
+}
+
 .form-textarea {
   width: 100%;
-  height: 65px;
+  height: 80px; /* Height increased */
   background: transparent;
   border: 1px solid var(--border-light);
   color: #ffffff;
-  padding: 10px;
-  font-size: 1rem; /* Font Size Increased */
+  padding: 12px; /* Padding increased */
+  font-size: 1.1rem; /* Font Size Increased Even More */
   resize: none;
   outline: none;
-  text-align: center; /* Centered */
 }
 
 .form-textarea::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.btn-submit {
+/* Status Icons (square and check) - Minimal CSS example, replace with actual icon styles if needed */
+.status-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px; /* Adjust spacing */
+}
+/* Placeholder solid square style for checked, update with actual tick graphic */
+.icon-checked {
+    background-color: white; 
+}
+
+
+/* Submit Button in Checkbox Style */
+.checkbox-style-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align left */
   width: 100%;
   background-color: #ffffff;
   color: #000000;
   border: none;
-  padding: 12px;
-  font-size: 1.15rem; /* Font Size Increased */
+  padding: 14px 18px; /* Padding Increased */
+  font-size: 1.25rem; /* Font Size Increased Even More */
   font-weight: bold;
   cursor: pointer;
   margin-top: 20px;
   border-radius: 2px;
-  text-align: center;
+  text-align: left;
+  gap: 12px;
+}
+
+/* Overwrite submit button hover if needed */
+.btn-submit:hover {
+    opacity: 0.9;
 }
