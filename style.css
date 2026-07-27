@@ -19,10 +19,10 @@ html, body {
   --border-light: rgba(255, 255, 255, 0.4);
 }
 
-/* Common Logo Style - Left Aligned */
+/* Common Logo Style - Center Aligned */
 .logo-container, .form-header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -30,7 +30,7 @@ html, body {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  margin-bottom: 0;
+  margin: 0 auto;
   object-fit: contain;
   display: block;
 }
@@ -46,6 +46,7 @@ html, body {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  text-align: center; /* Text Centered */
   clip-path: polygon(
     0 0, 
     100% 0, 
@@ -60,23 +61,23 @@ html, body {
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 3.5rem; /* Font Size Increased */
   font-weight: 800;
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* Font Size Increased */
   opacity: 0.95;
   margin-bottom: 25px;
 }
 
 .hero-description {
-  font-size: 0.95rem;
+  font-size: 1.1rem; /* Font Size Increased */
   line-height: 1.6;
   max-width: 900px;
-  margin-bottom: 18px;
+  margin: 0 auto 18px auto; /* Centered layout */
   opacity: 0.92;
 }
 
@@ -91,19 +92,21 @@ html, body {
 }
 
 .category-title {
-  font-size: 1.05rem;
+  font-size: 1.25rem; /* Font Size Increased */
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center; /* Centered */
+  gap: 10px;
   color: #222222;
 }
 
+/* Bullets Size Increased */
 .category-title::before {
   content: "►";
-  font-size: 0.6rem;
+  font-size: 0.9rem; /* Bullets Size Increased */
 }
 
 .cards-grid {
@@ -124,14 +127,14 @@ html, body {
 }
 
 .card-title {
-  font-size: 0.85rem;
+  font-size: 1rem; /* Font Size Increased */
   font-weight: bold;
   color: #333333;
   margin-bottom: 4px;
 }
 
 .card-desc {
-  font-size: 0.78rem;
+  font-size: 0.9rem; /* Font Size Increased */
   color: #666666;
 }
 
@@ -155,12 +158,13 @@ html, body {
   ) !important;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* Centered */
+  text-align: center; /* Centered */
   gap: 20px;
 }
 
 .footer-text {
-  font-size: 1.15rem;
+  font-size: 1.35rem; /* Font Size Increased */
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.4;
@@ -173,7 +177,7 @@ html, body {
   background-color: #ffffff;
   color: #000000;
   padding: 12px 22px;
-  font-size: 0.85rem;
+  font-size: 1rem; /* Font Size Increased */
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -191,7 +195,7 @@ html, body {
 .form-header {
   padding: 25px 8%;
   background-color: #ffffff;
-  justify-content: flex-start;
+  justify-content: center; /* Centered */
 }
 
 .form-page-container {
@@ -208,6 +212,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  text-align: center; /* Centered */
   clip-path: polygon(
     0 0, 
     100% 0, 
@@ -222,7 +227,7 @@ html, body {
 }
 
 .form-main-heading {
-  font-size: 3.5rem;
+  font-size: 4rem; /* Font Size Increased */
   font-weight: 800;
   margin-top: 0;
   margin-bottom: 22px;
@@ -230,18 +235,19 @@ html, body {
 }
 
 .form-info-text {
-  font-size: 1rem;
+  font-size: 1.15rem; /* Font Size Increased */
   line-height: 1.6;
   opacity: 0.95;
   max-width: 400px;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto; /* Centered layout */
 }
 
 .form-deadline-text {
-  font-size: 1.2rem;
+  font-size: 1.35rem; /* Font Size Increased */
   font-weight: bold;
   max-width: 350px;
   line-height: 1.4;
+  margin: 0 auto;
 }
 
 .form-right-container {
@@ -258,8 +264,9 @@ html, body {
   background: transparent;
   border: 1px solid var(--border-light);
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1.05rem; /* Font Size Increased */
   outline: none;
+  text-align: center; /* Centered */
 }
 
 .form-input::placeholder {
@@ -267,14 +274,14 @@ html, body {
 }
 
 .awards-section-title {
-  font-size: 1.2rem;
+  font-size: 1.35rem; /* Font Size Increased */
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 6px;
 }
 
 .awards-instruction {
-  font-size: 0.8rem;
+  font-size: 0.95rem; /* Font Size Increased */
   opacity: 0.85;
   margin-bottom: 18px;
 }
@@ -286,8 +293,9 @@ html, body {
 .award-checkbox-label {
   display: flex;
   align-items: center;
+  justify-content: center; /* Centered */
   gap: 10px;
-  font-size: 0.9rem;
+  font-size: 1.05rem; /* Font Size Increased */
   font-weight: bold;
   margin-bottom: 8px;
   cursor: pointer;
@@ -300,9 +308,10 @@ html, body {
   border: 1px solid var(--border-light);
   color: #ffffff;
   padding: 10px;
-  font-size: 0.88rem;
+  font-size: 1rem; /* Font Size Increased */
   resize: none;
   outline: none;
+  text-align: center; /* Centered */
 }
 
 .form-textarea::placeholder {
@@ -315,7 +324,7 @@ html, body {
   color: #000000;
   border: none;
   padding: 12px;
-  font-size: 1rem;
+  font-size: 1.15rem; /* Font Size Increased */
   font-weight: bold;
   cursor: pointer;
   margin-top: 20px;
