@@ -4,94 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Submission - Red Card 2018</title>
-   <link rel="stylesheet" href="style.css">
-         
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="submission-body">
+<body>
 
-  <!-- Top White Header -->
-  <header class="form-header">
-    <img src="images/logo.png" alt="Logo" class="logo">
+  <!-- TOP HEADER (Logo at top-left end) -->
+  <header class="top-header">
+    <img src="logo.png" alt="Logo" class="site-logo">
   </header>
 
-  <!-- Red Hero Form Section -->
-  <main class="form-page-container">
+  <!-- SUBMISSION FORM CONTAINER -->
+  <div class="form-page-container">
     
-    <!-- Left Column: Title & Info -->
+    <!-- LEFT SIDE DETAILS -->
     <div class="form-left-info">
       <h1 class="form-main-heading">Submission</h1>
       <p class="form-info-text">
         All details of submissions will be kept strictly private and confidential by Mailman and will not be used for any purpose other than judging Red Card 2018 winners.
       </p>
-      <div class="form-deadline-text">
-        Applications will close on the<br>15th December 2017
-      </div>
+      <p class="form-deadline-text">
+        Applications will close on the 15th December 2017
+      </p>
     </div>
 
-    <!-- Right Column: Form Inputs -->
+    <!-- RIGHT SIDE FORM INPUTS -->
     <div class="form-right-container">
-      <form>
+      <form action="#" method="POST">
+        
         <div class="form-group">
-          <input type="text" class="form-input" placeholder="Name">
+          <input type="text" placeholder="Name" class="form-input" required>
         </div>
         <div class="form-group">
-          <input type="email" class="form-input" placeholder="Email Address">
+          <input type="email" placeholder="Email Address" class="form-input" required>
         </div>
         <div class="form-group">
-          <input type="text" class="form-input" placeholder="Organisation">
+          <input type="text" placeholder="Organisation" class="form-input" required>
         </div>
 
         <h3 class="awards-section-title">Which Award</h3>
         <p class="awards-instruction">(Please tick and provide details for all of the awards you would like to be nominated for)</p>
 
-        <!-- Award Item 1 -->
+        <!-- AWARD ITEM 1 -->
         <div class="award-item">
           <label class="award-checkbox-label">
             <input type="checkbox" checked> Best Livestream
           </label>
-          <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
+          <textarea placeholder="Description & Results (max. 150 words)" class="form-textarea"></textarea>
         </div>
 
-        <!-- Award Item 2 -->
+        <!-- AWARD ITEM 2 -->
         <div class="award-item">
           <label class="award-checkbox-label">
             <input type="checkbox"> Best Tour Campaign
           </label>
-          <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
+          <textarea placeholder="Description & Results (max. 150 words)" class="form-textarea"></textarea>
         </div>
 
-        <!-- Award Item 3 -->
+        <!-- AWARD ITEM 3 -->
         <div class="award-item">
           <label class="award-checkbox-label">
             <input type="checkbox"> Best Sponsor Activation
           </label>
-          <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
+          <textarea placeholder="Description & Results (max. 150 words)" class="form-textarea"></textarea>
         </div>
 
-        <!-- Award Item 4 -->
+        <!-- AWARD ITEM 4 -->
         <div class="award-item">
           <label class="award-checkbox-label">
             <input type="checkbox"> Best Use of Technology
           </label>
-          <textarea class="form-textarea" placeholder="Description & Results (max. 150 words)"></textarea>
+          <textarea placeholder="Description & Results (max. 150 words)" class="form-textarea"></textarea>
         </div>
 
-        <!-- Award Item 5 -->
+        <!-- AWARD ITEM 5 -->
         <div class="award-item">
           <label class="award-checkbox-label">
             <input type="checkbox"> Best Online Campaign
           </label>
-          <textarea class="form-textarea" placeholder="Description & results (max. 150 words)"></textarea>
+          <textarea placeholder="Description & Results (max. 150 words)" class="form-textarea"></textarea>
         </div>
 
-        <!-- Submit Button -->
-        <button type="button" class="btn-submit">
-          <span>&#10003;</span> Submission Successful
-        </button>
+        <button type="submit" class="btn-submit">✓ Submission Successful</button>
       </form>
     </div>
 
-  </main>
+  </div>
 
 </body>
 </html>
